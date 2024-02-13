@@ -1,0 +1,668 @@
+/** unmonoqueteclea's blog styles */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/lxgw-wenkai-screen-webfont/1.7.0/lxgwwenkaiscreenr.css");
+/* @font-face { */
+/*     font-family: "lxgw"; */
+/*     src: url("LXGWWenKaiMono-Regular.ttf") format("truetype"); */
+/*     font-weight: 400; */
+/*     font-style: normal; */
+/* } */
+
+.header{
+  line-height: 40px;
+  text-align: center;
+}
+
+.header .page-title {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.header img {
+  text-align: center;
+  display: inline;
+  vertical-align:middle;
+  height: 25px;
+}
+
+.header .menu-links {
+  font-size: 15px;
+  margin-left: 80px;
+  font-weight: 400;
+
+}
+
+.header .menu-icons {
+  height: 15px;
+  width: 15px;
+}
+
+.preamble-sep {
+  width: 50%;
+  margin: 30px auto;
+  margin-bottom: 80px;
+  border: 1px dashed #999;
+  border-style: none none dashed;
+  color: #fff;
+  background-color: #fff;
+}
+
+
+/* header for small-medium screens */
+@media (max-width: 700px) {
+  .preamble-sep {
+    width: 90%;
+  }
+  .header .menu-links {
+    font-size: 15px;
+    margin-left: 0px;
+    font-weight: 400;
+    display:block;
+  }
+}
+
+@media (max-width: 1200px) {
+  .preamble-sep {
+    width: 70%;
+  }
+}
+
+.post-date:before {
+  content: '📅 ';
+}
+
+#postamble {
+  margin-top: 70px;
+  margin-bottom: 0px;
+}
+
+.footer-networks ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.footer-networks ul li{
+  display: inline;
+  margin-right: 15px;
+}
+
+.footer-networks-icons {
+  height: 15px;
+  width: 15px;
+}
+
+/* h2:before { */
+/*   content: "*"; */
+/*   margin-left: 0em; */
+/* } */
+/* h3:before { */
+/*   content: "**"; */
+/*   margin-left: 0.75em; */
+/* } */
+/* h4:before { */
+/*   content: "***"; */
+/*   margin-left: 1.25em; */
+/* } */
+
+h1:before, h2:before, h3:before {
+  margin-right: 10px;
+  top: auto;
+  color: #ccc;
+  display: inline;
+}
+
+#archive {
+  font-size: 15px;
+}
+
+.taglist:before {
+  content: ' 🏷️ ';
+}
+
+.taglist {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 65px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.1;
+  color: #888;
+  text-rendering: optimizeLegibility;
+}
+
+
+/* footer small-medium screens */
+@media (max-width: 700px) {
+  .social-name {
+    display: none;
+  }
+  .copyright-name {
+    display: block;
+  }
+  .copyright-rights {
+    display: block;
+  }
+}
+
+
+/** https://zngguvnf.org/2017-07-13--blogging-with-org-static-blog.html */
+
+#content {
+  background: #fff;
+  padding-top: 0px;
+  max-width: 800px;
+  position: relative;
+  margin: 0px auto;
+}
+#header {
+    float: right;
+    margin-left: 1em;
+    margin-bottom: 1em
+}
+
+/******************************************************
+ * I copied these styles from markdotto.com, who is
+ * the creator of bootstrap, and I also did some
+ * modification. Thanks Mark for the beautiful theme,
+ * so I reserved the @mdo sign below.
+ *****************************************************/
+
+/*
+  __
+  __                  /\ \
+  /'_`\_    ___ ___    \_\ \    ___
+  /'/'_` \ /' __` __`\  /'_` \  / __`\
+  /\ \ \L\ \/\ \/\ \/\ \/\ \L\ \/\ \L\ \
+  \ \ `\__,_\ \_\ \_\ \_\ \___,_\ \____/
+  \ `\_____\\/_/\/_/\/_/\/__,_ /\/___/
+  `\/_____/
+
+*/
+
+
+
+/* Body resets
+   -------------------------------------------------- */
+
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+    font-size: min(max(16px, 4vw), 22px);
+}
+body {
+    padding: 40px;
+    font-family: "LXGW WenKai Screen R", Menlo, Monaco, monospace;
+    font-size: 15px;
+    line-height: 1.65;
+    color: #666;
+    background-color: #fff;
+}
+p {
+    /* margin: 10px 0 15px; */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.headline {
+    display: flex;
+}
+
+
+.post-title {
+  flex-grow: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 8%;
+  margin-bottom: -1%;
+  font-weight: bold;
+  color: #111;
+}
+
+/* h1, h2, h3 { */
+/*     margin: 0px; */
+/*     position: relative; */
+/*     font-size: 18px; */
+/*     font-weight: bold; */
+/*     line-height: 2; */
+/*     color: #111; */
+/*     text-rendering: optimizeLegibility; */
+/* } */
+
+h1 {
+  margin-bottom: 25px;
+}
+
+h2 {
+  margin-bottom: 25px;
+  margin-top: 10px;
+}
+
+
+i, em, b, strong {
+  padding-left: .1em;
+  padding-right: .1em;
+}
+b, strong {
+    font-weight: bold;
+    color: #333;
+}
+ul, ol {
+    padding: 0;
+    margin: 0 0 20px;
+}
+code {
+    color: #d66;
+}
+code:before, code:after {
+    content: "~";
+    color: #ddd;
+}
+
+pre {
+  background: #f8f8f8;
+  font-family: "LXGW WenKai Screen R", monospace;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 13px;
+  padding: 6px;
+  overflow: auto;
+  border-radius: 6px 6px 6px 6px;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+blockquote {
+    padding: 0 0 0 30px;
+    margin: 0 30px 20px 0;
+    color: #999;
+    border-left: 3px solid #e5e5e5;
+}
+blockquote p:last-child {
+    margin-bottom: 0;
+}
+img {
+    display: block;
+    margin: 0;
+    border-radius: 5px;
+}
+a {
+    font-weight: inherit;
+    line-height: inherit;
+    color: #000;
+    text-decoration: none;
+}
+sup a:before {
+    content: "[";
+}
+sup a:after {
+    content: "]";
+}
+p > a {
+    text-decoration: underline;
+}
+table {
+    line-height: 2.5;
+    margin-bottom: 15px;
+    max-width: 100%;
+    width: 100%;
+}
+table td, table th {
+    padding: 0 15px;
+}
+table th.left, table td.left {
+    text-align: left;
+}
+table th.right, table td.right {
+    text-align: right;
+}
+
+
+/* body */
+.container {
+    margin: 0 auto;
+    max-width: 770px;
+}
+/* head */
+.masthead {
+    color: #888;
+}
+.masthead:after {
+    display: block;
+    content: '----------------------------------------------------------------';
+    margin: 10px 0;
+    color: #ccc;
+}
+.masthead a {
+    color: #333;
+}
+.masthead ul {
+    list-style: none;
+}
+.masthead li {
+    display: inline-block;
+}
+.masthead li + li:before {
+    display: inline-block;
+    content: "\00B7 \00a0";
+    color: #ccc;
+}
+/* searchform*/
+#searchform {
+    position: absolute;
+    top: 54px;
+    right: 30.4%;
+}
+#searchform #s {
+    background: url("/media/img/search.png") no-repeat 5px 6px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    width: 90px;
+    height: 30px;
+    line-height: 12px;
+    padding: 4px 10px 4px 28px;
+
+    -webkit-transition-duration: 400ms;
+    -webkit-transition-property: width, background;
+    -webkit-transition-timing-function: ease;
+    -moz-transition-duration: 400ms;
+    -moz-transition-property: width, background;
+    -moz-transition-timing-function: ease;
+    -o-transition-duration: 400ms;
+    -o-transition-property: width, background;
+    -o-transition-timing-function: ease;
+}
+#searchform #s:focus {
+    background-color: #f9f9f9;
+    width: 160px;
+}
+.masthead img.avatar {
+    position: relative;
+    float: right;
+    margin-top: -100px;
+    margin-bottom: -100%;
+    margin-right: 10%;
+    width: 200px;
+    background-color: #fff;
+}
+/* post */
+.post {
+    position: relative;
+}
+.post:after {
+    display: block;
+    content: "----------------------------------------------------------------";
+    color: #ccc;
+}
+.post img {
+    max-width: 100%;
+}
+.post li {
+    list-style: none outside none;
+}
+.post ul > li:before {
+    content: "- ";
+    margin-left: -1.25em;
+    color: #ccc;
+}
+.post ol {
+    counter-reset: o-list;
+}
+.post ol > li:before {
+    content: counter(o-list) ") ";
+    counter-increment: o-list;
+    margin-left: -1.85em;
+    color: #ccc;
+}
+
+/* special for li in pre */
+.post pre li {
+    list-style-type: decimal;
+}
+
+.post pre li:before {
+    display: none;
+}
+
+/* meta info */
+.post-info {
+    display: inline-block;
+    margin: -10px 0 -10px;
+    color: #999;
+}
+.post-info + .post-info:before {
+    content: "\2223 \00a0";
+}
+.post-meta:after {
+    content: "----------------------------------------------------------------";
+    display: block;
+    margin-top: -1px;
+    color: #ccc;
+}
+
+/* table of content */
+#table-of-contents {
+    position: fixed; right: 0em; top: 0em;
+    margin-top: 120px; /* offset from the top of the screen */
+
+    padding: 0em !important;
+    width: auto;
+    min-width: auto !important;
+
+    /* font-size: 10pt; */
+    background: white;
+    line-height: 10pt;
+    text-align: right;
+
+    border:1px solid #e1e1e8;
+    -webkit-box-shadow: 0 0 1em #777777;
+    -moz-box-shadow: 0 0 1em #777777;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    /* ensure doesn't flow off the screen when expanded */
+    max-height: 80%;
+    overflow: auto;
+    z-index: 200;
+}
+
+#table-of-contents h2 {
+    max-width: 12em;
+    font-weight: normal;
+    padding-left: 0.5em;
+    padding-top: 0.05em;
+    padding-bottom: 0em;
+}
+
+#table-of-contents ul {
+    margin-left: 10pt;
+    margin-bottom: 5pt;
+    color: pink;
+    padding: 0
+}
+
+#table-of-contents li {
+    padding: 0;
+    margin: 10px;
+    list-style: disc;
+}
+
+
+#table-of-contents #text-table-of-contents {
+    display: none;
+    text-align: left;
+}
+
+#table-of-contents:hover #text-table-of-contents {
+    display: block;
+    padding: 0.5em;
+    margin-top: -1.5em;
+}
+/* footer */
+.footer {
+    margin: 80px 0 0;
+    text-align: center;
+    font-size: 15px;
+    color: #999;
+}
+.footer > p {
+    margin: 0;
+    line-height: 1.5;
+}
+.footpara {
+    display: inline;
+}
+
+/* Define org todo faces */
+.PROJECT {
+   color: red;
+}
+
+.TODO {
+   color: red;
+}
+
+.NEXT {
+   color: blue;
+}
+
+.STARTED {
+   color: blue;
+}
+
+.WAITING {
+   color: orange;
+}
+
+.DELEGATED {
+   color: orange;
+}
+
+.DONE {
+   color: green;
+}
+
+.CANCELLED {
+   color: green;
+}
+
+.REF {
+   color: blue;
+}
+
+.SOMEDAY {
+   color: blue;
+}
+
+
+.org-ul {
+  margin-left: 30px;
+}
+
+.org-ol {
+  margin-left: 30px;
+}
+
+
+/* Pretty printing styles. Used with prettify.js.
+ *
+ * This version is slight modified based on the original version.
+ *
+ * Name:    Stanley Ng
+ * Email:   stanleyhlng@googlegroups.com
+ *
+ * Reference:
+ * http://code.google.com/p/google-code-prettify/source/browse/trunk/src/prettify.css
+ */
+.pln {
+  color: #bd3613; }
+
+.str {
+  color: #269186; }
+
+.kwd {
+  color: #859900; }
+
+.com {
+  color: #586175;
+  font-style: italic; }
+
+.typ {
+  color: #b58900; }
+
+.lit {
+  color: #2aa198; }
+
+.pun {
+  color: #839496; }
+
+.opn {
+  color: #839496; }
+
+.clo {
+  color: #839496; }
+
+.tag {
+  color: #268bd2; }
+
+.atn {
+  color: #586175; }
+
+.atv {
+  color: #2aa198; }
+
+.dec {
+  color: #268bd2; }
+
+.var {
+  color: #268bd2; }
+
+.fun {
+  color: #FF0000; }
+
+/* Put a border around prettyprinted code snippets. */
+pre.prettyprint {
+  background-color: #042029;
+  padding: 10px;
+  border: 1px solid #E1E1E8; }
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums {
+  color: #4c666c;
+  margin: 0 0 0 40px; }
+
+ol.linenums li {
+  line-height: 18px;
+  padding-left: 12px;
+}
+
+.outline-2 {
+  margin-bottom: 70px;
+
+}
+
+figure {
+  margin: 0px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+figcaption {
+  margin-top: 8px;
+  margin-left: 4px;
+  text-align: center;
+}
+
+.figure-number {
+  display: none;
+}
