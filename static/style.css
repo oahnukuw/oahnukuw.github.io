@@ -406,7 +406,7 @@ table th.right, table td.right {
     color: #ccc;
 }
 .post img {
-    max-width: 100%;
+    max-width: 80%;
 }
 .post li {
     list-style: none outside none;
