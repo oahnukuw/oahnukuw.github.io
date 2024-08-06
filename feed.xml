@@ -4,7 +4,7 @@
 <title><![CDATA[Iterative]]></title>
 <description><![CDATA[Iterative]]></description>
 <link>https://oahnukuw.github.io/</link>
-<lastBuildDate>Tue, 06 Aug 2024 18:44:15 +0800</lastBuildDate>
+<lastBuildDate>Tue, 06 Aug 2024 18:48:05 +0800</lastBuildDate>
 <item>
   <title><![CDATA[§Java Features That I Learned]]></title>
   <description><![CDATA[
@@ -1936,11 +1936,11 @@ Since 1.8
 <h2> <a href="javascript:window.scrollTo(0,0)" style="color: black !important;" class="tooltip" title="Go to the top of the page">Ξ </a> </h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org0523d24">1. functional-programming.concept.immutable-data</a></li>
-<li><a href="#org6b55f47">2. functional-programming.concept.no-side-effects</a></li>
-<li><a href="#org3549178">3. functional-programming.concept.higher-order-function</a></li>
-<li><a href="#org59317e3">4. functional-programming.vs.lang.java.object-oriented-programming</a></li>
-<li><a href="#org4283a7c">5. References</a></li>
+<li><a href="#org32d4b69">1. functional-programming.concept.immutable-data</a></li>
+<li><a href="#orgcd83162">2. functional-programming.concept.no-side-effects</a></li>
+<li><a href="#orgb2c79de">3. functional-programming.concept.higher-order-function</a></li>
+<li><a href="#orgf5a8584">4. functional-programming.vs.lang.java.object-oriented-programming</a></li>
+<li><a href="#orgb3f7d0c">5. References</a></li>
 </ul>
 </div>
 </nav>
@@ -1948,8 +1948,8 @@ Since 1.8
 当谈到函数式编程的特点时，两个关键概念是不可变数据（Immutable Data）和无副作用（No Side Effects）。
 </p>
 
-<div id="outline-container-org0523d24" class="outline-2">
-<h2 id="org0523d24"><span class="section-number-2">1.</span> functional-programming.concept.immutable-data</h2>
+<div id="outline-container-org32d4b69" class="outline-2">
+<h2 id="org32d4b69"><span class="section-number-2">1.</span> functional-programming.concept.immutable-data</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 在函数式编程中，数据一旦被创建就不可更改。这意味着，一旦你创建了一个对象，你不能直接修改它的状态，而是通过创建一个新的对象来表达数据的变化。这种不可变性有助于避免并发问题，使得代码更容易推理和测试，并且在多线程环境下更加安全。
@@ -1975,8 +1975,8 @@ String str = <span style="color: #7FC1CA;">"Hello"</span>;
 </div>
 </div>
 
-<div id="outline-container-org6b55f47" class="outline-2">
-<h2 id="org6b55f47"><span class="section-number-2">2.</span> functional-programming.concept.no-side-effects</h2>
+<div id="outline-container-orgcd83162" class="outline-2">
+<h2 id="orgcd83162"><span class="section-number-2">2.</span> functional-programming.concept.no-side-effects</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 函数式编程强调函数的计算过程不应该产生对除了函数返回值以外的其他外部状态的影响。这意味着函数不应该修改任何可变的全局变量、类属性或引起其他的状态变化。函数的计算过程应该是纯粹的，只依赖于输入参数，并始终产生相同的输出结果。
@@ -2014,8 +2014,8 @@ String str = <span style="color: #7FC1CA;">"Hello"</span>;
 </div>
 </div>
 
-<div id="outline-container-org3549178" class="outline-2">
-<h2 id="org3549178"><span class="section-number-2">3.</span> functional-programming.concept.higher-order-function</h2>
+<div id="outline-container-orgb2c79de" class="outline-2">
+<h2 id="orgb2c79de"><span class="section-number-2">3.</span> functional-programming.concept.higher-order-function</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 （Higher-Order Function）是指可以接受一个或多个函数作为参数，并/或返回一个函数作为结果的函数。换句话说，它是将函数作为一等公民对待的编程语言特性。在函数式编程中，高阶函数是一种常见的概念，它允许函数作为数据进行操作，从而实现更加灵活和抽象的编程方式。
@@ -2060,8 +2060,8 @@ result2 = apply_operation(multiply, <span style="color: #7FC1CA; font-weight: bo
 </div>
 </div>
 
-<div id="outline-container-org59317e3" class="outline-2">
-<h2 id="org59317e3"><span class="section-number-2">4.</span> functional-programming.vs.<a href="20240806T182547--java_features_that_i_learn.html#ID-e656f383-398e-445b-b095-0456920b69ea">lang.java.object-oriented-programming</a></h2>
+<div id="outline-container-orgf5a8584" class="outline-2">
+<h2 id="orgf5a8584"><span class="section-number-2">4.</span> functional-programming.vs.<a href="20240806T182547--java_features_that_i_learned.html#ID-e656f383-398e-445b-b095-0456920b69ea">lang.java.object-oriented-programming</a></h2>
 <div class="outline-text-2" id="text-4">
 <p>
 函数式编程可以很好地融合到，面向对象编程中。
@@ -2072,11 +2072,11 @@ result2 = apply_operation(multiply, <span style="color: #7FC1CA; font-weight: bo
 </p>
 
 <p>
-而函数式编程的<a href="#org0523d24">不可变数据（Immutable Data）</a>以及调用的<a href="#org6b55f47">无副作用（No Side Effects）</a>均能够在对象交互层面提供更高的健壮性。
+而函数式编程的<a href="#org32d4b69">不可变数据（Immutable Data）</a>以及调用的<a href="#orgcd83162">无副作用（No Side Effects）</a>均能够在对象交互层面提供更高的健壮性。
 </p>
 
 <p>
-Java 8 引入的 <a href="20240806T182547--java_features_that_i_learn.html#ID-37c13a3f-cff9-4698-9aea-d557b94cbd51">Lambda 表达式（ Java ）</a> 就是一个很好的例子，输入一个 List 可以对其进行各种操作，再按照传入的函数处理返回一个期望的数据结构。
+Java 8 引入的 <a href="20240806T182547--java_features_that_i_learned.html#ID-37c13a3f-cff9-4698-9aea-d557b94cbd51">Lambda 表达式（ Java ）</a> 就是一个很好的例子，输入一个 List 可以对其进行各种操作，再按照传入的函数处理返回一个期望的数据结构。
 </p>
 
 <blockquote>
@@ -2095,8 +2095,8 @@ Master the functional programming paradigm so you are able to judiciously apply 
 </div>
 </div>
 
-<div id="outline-container-org4283a7c" class="outline-2">
-<h2 id="org4283a7c"><span class="section-number-2">5.</span> References</h2>
+<div id="outline-container-orgb3f7d0c" class="outline-2">
+<h2 id="orgb3f7d0c"><span class="section-number-2">5.</span> References</h2>
 <div class="outline-text-2" id="text-5">
 <ul class="org-ul">
 <li>ChatGpt-3.5: 函数式编程的特点包括不可变数据、无副作用，可以详细解释下么？给出 java 语言中的例子</li>
@@ -2108,7 +2108,7 @@ Master the functional programming paradigm so you are able to judiciously apply 
   <category><![CDATA[blog.java]]></category>
   <link>https://oahnukuw.github.io/20230726T105636--functional-programming.html</link>
   <guid>https://oahnukuw.github.io/20230726T105636--functional-programming.html</guid>
-  <pubDate>Tue, 06 Aug 2024 18:25:00 +0800</pubDate>
+  <pubDate>Tue, 06 Aug 2024 18:20:00 +0800</pubDate>
 </item>
 <item>
   <title><![CDATA[刻意练习的关键：心理表征]]></title>
