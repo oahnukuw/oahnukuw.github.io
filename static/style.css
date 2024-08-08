@@ -258,6 +258,8 @@ b, strong {
 ul, ol {
     padding: 0;
     margin: 0 0 20px;
+    margin-top: 20px;
+
 }
 code {
     color: #d66;

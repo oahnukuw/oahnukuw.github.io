@@ -4,7 +4,7 @@
 <title><![CDATA[Iterative]]></title>
 <description><![CDATA[Iterative]]></description>
 <link>https://oahnukuw.github.io/</link>
-<lastBuildDate>Tue, 06 Aug 2024 18:48:05 +0800</lastBuildDate>
+<lastBuildDate>Wed, 07 Aug 2024 15:38:39 +0800</lastBuildDate>
 <item>
   <title><![CDATA[§Java Features That I Learned]]></title>
   <description><![CDATA[
@@ -12,109 +12,108 @@
 <h2> <a href="javascript:window.scrollTo(0,0)" style="color: black !important;" class="tooltip" title="Go to the top of the page">Ξ </a> </h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgd9e4476">1. programming.semantics</a></li>
-<li><a href="#org0731022">2. lang.java.class.life-circle</a>
+<li><a href="#org754e5cf">1. programming.semantics</a></li>
+<li><a href="#orgf4d0365">2. lang.java.class.life-circle</a>
 <ul>
-<li><a href="#org68b126f">2.1. 加载：查找字节码文件并载入内存</a></li>
-<li><a href="#org3c05680">2.2. 连接</a></li>
-<li><a href="#org672bc69">2.3. 初始化</a></li>
-<li><a href="#org18c2bdd">2.4. 卸载</a></li>
-<li><a href="#org19b0f04">2.5. 参见：https://pdai.tech/md/java/jvm/java-jvm-classload.html</a></li>
+<li><a href="#org0ea31a2">2.1. 加载：查找字节码文件并载入内存</a></li>
+<li><a href="#org0e8b5e0">2.2. 连接</a></li>
+<li><a href="#org90f1b80">2.3. 初始化</a></li>
+<li><a href="#orge94b733">2.4. 卸载</a></li>
+<li><a href="#org3344549">2.5. 参见：https://pdai.tech/md/java/jvm/java-jvm-classload.html</a></li>
 </ul>
 </li>
-<li><a href="#org6575cdb">3. lang.java.concept.object&#x2013;abstraction of code</a>
+<li><a href="#org8132509">3. lang.java.concept.object&#x2013;abstraction of code</a>
 <ul>
-<li><a href="#org214b58d">3.1. equals-hashCode-override</a></li>
-<li><a href="#org927c304">3.2. 参见：</a></li>
+<li><a href="#orgbb19382">3.1. equals-hashCode-override</a></li>
+<li><a href="#org6eeacfe">3.2. 参见：</a></li>
 </ul>
 </li>
-<li><a href="#org1cd6382">4. lang.java.concept.classpath&#x2013;url to locate class</a>
+<li><a href="#org1f7768f">4. lang.java.concept.classpath&#x2013;url to locate class</a>
 <ul>
-<li><a href="#org843585c">4.1. 方法参数传递</a></li>
-<li><a href="#org02d5922">4.2. References</a></li>
+<li><a href="#orga247941">4.1. 方法参数传递</a></li>
+<li><a href="#orgcc8b54d">4.2. References</a></li>
 </ul>
 </li>
-<li><a href="#org356edf0">5. lang.java.concept.object<sub>oriented</sub><sub>programming</sub>&#x2013;code abstraction base on object</a>
+<li><a href="#org254fad8">5. lang.java.concept.object_oriented_programming&#x2013;code abstraction base on object</a>
 <ul>
-<li><a href="#org84bc2b4">5.1. Encapsulation</a></li>
-<li><a href="#org23354c4">5.2. Reference</a></li>
+<li><a href="#org0d8c456">5.1. Encapsulation</a></li>
+<li><a href="#org58b3fcb">5.2. Reference</a></li>
 </ul>
 </li>
-<li><a href="#orgd3b49cf">6. lang.java.feat.inheritance&#x2013;Mechanism to reuse code (field-method)</a>
+<li><a href="#orgc36b931">6. lang.java.feat.inheritance&#x2013;Mechanism to reuse code (field-method)</a>
 <ul>
-<li><a href="#org65065a6">6.1. inheritance.method-call-priority</a></li>
+<li><a href="#org32a0bc8">6.1. inheritance.method-call-priority</a></li>
 </ul>
 </li>
-<li><a href="#org1afa784">7. lang.java.feat.polymorphism&#x2013;Mechanism-to-seperate-code</a>
+<li><a href="#orgc027445">7. lang.java.feat.polymorphism&#x2013;Mechanism-to-seperate-code</a>
 <ul>
-<li><a href="#orgc83fe72">7.1. 多态意味着面向抽象编程</a></li>
-<li><a href="#org52c7bc0">7.2. polymorphism.example</a></li>
+<li><a href="#org9fde269">7.1. 多态意味着面向抽象编程</a></li>
+<li><a href="#org1b8e411">7.2. polymorphism.example</a></li>
 </ul>
 </li>
-<li><a href="#org46cd96e">8. lang.java.feat.auto<sub>boxing</sub>&#x2013;Box of basic data type</a></li>
-<li><a href="#orgeb75c2b">9. lang.java.feat.reflection&#x2013;Mechanism to manipulate class</a>
+<li><a href="#org7d3987c">8. lang.java.feat.auto_boxing&#x2013;Box of basic data type</a></li>
+<li><a href="#org2bdf07f">9. lang.java.feat.reflection&#x2013;Mechanism to manipulate class</a>
 <ul>
-<li><a href="#org4e4417f">9.1. 获取「类」的 Class&lt;T&gt; 对象</a></li>
-<li><a href="#orge9f14e4">9.2. 操作字段通过 Class&lt;T&gt; 中的 Field 相关方法</a></li>
-<li><a href="#org1c6f92b">9.3. 操作方法通过 Class&lt;T&gt; 中的 Method 相关方法</a></li>
+<li><a href="#org03575bb">9.1. 获取「类」的 Class&lt;T&gt; 对象</a></li>
+<li><a href="#orgb860f6e">9.2. 操作字段通过 Class&lt;T&gt; 中的 Field 相关方法</a></li>
+<li><a href="#orgf431c89">9.3. 操作方法通过 Class&lt;T&gt; 中的 Method 相关方法</a></li>
 </ul>
 </li>
-<li><a href="#org74a66dc">10. lang.java.feat.access<sub>level</sub><sub>modifiers</sub>&#x2013;Mechanism to restrict scope of access</a>
+<li><a href="#org9221c00">10. lang.java.feat.access_level_modifiers&#x2013;Mechanism to restrict scope of access</a>
 <ul>
-<li><a href="#org561b415">10.1. Reference</a></li>
+<li><a href="#org1937ffb">10.1. Reference</a></li>
 </ul>
 </li>
-<li><a href="#orgc14983d">11. lang.java.feat.exception&#x2013;Mechanism to deal with error of code</a>
+<li><a href="#orgb1e4f6c">11. lang.java.feat.exception&#x2013;Mechanism to deal with error of code</a>
 <ul>
-<li><a href="#org410ed0b">11.1. lang.java.feat.exception.claim-to-catch</a></li>
-<li><a href="#orgc288183">11.2. lang.java.feat.exception.type</a></li>
-<li><a href="#org4f06c72">11.3. lang.java.feat.exception.throw-example</a></li>
+<li><a href="#orgbe38206">11.1. lang.java.feat.exception.claim-to-catch</a></li>
+<li><a href="#orgd17358f">11.2. lang.java.feat.exception.type</a></li>
+<li><a href="#org643bd03">11.3. lang.java.feat.exception.throw-example</a></li>
 </ul>
 </li>
-<li><a href="#org89dd9a6">12. lang.java.feat.anonymous<sub>class</sub>&#x2013;Mechanism to deliver interface to methods</a>
+<li><a href="#org868300c">12. lang.java.feat.anonymous_class&#x2013;Mechanism to deliver interface to methods</a>
 <ul>
-<li><a href="#org25a2882">12.1. Definition</a></li>
-<li><a href="#org053d832">12.2. Access to protected method in other package</a></li>
-<li><a href="#org79a4c2b">12.3. Use Cases</a></li>
-<li><a href="#orgce90bfc">12.4. lang.java.feat.lambda simplifcation-lambda-expression</a></li>
-<li><a href="#org3a4c284">12.5. reference</a></li>
+<li><a href="#org79c980f">12.1. Definition</a></li>
+<li><a href="#org3e5b81a">12.2. Access to protected method in other package</a></li>
+<li><a href="#orgd9fd6a4">12.3. Use Cases</a></li>
+<li><a href="#org4272b93">12.4. lang.java.feat.lambda simplifcation-lambda-expression</a></li>
+<li><a href="#orgc080d59">12.5. reference</a></li>
 </ul>
 </li>
-<li><a href="#orga09fe16">13. lang.java.feat.nested<sub>class</sub>&#x2013;Way to group class to make code neatter</a>
+<li><a href="#org57b504d">13. lang.java.feat.nested_class&#x2013;Way to group class to make code neatter</a>
 <ul>
-<li><a href="#org68ca4dc">13.1. Why Use Nested Classes?</a></li>
+<li><a href="#org416d3db">13.1. Why Use Nested Classes?</a></li>
 </ul>
 </li>
-<li><a href="#org7a325f0">14. lang.java.feat.static<sub>nested</sub><sub>class</sub>&#x2013;As the same as top-level class but nested</a></li>
-<li><a href="#org7a89ec3">15. lang.java.feat.interface&#x2013;Define behavior of code but no implementation</a></li>
-<li><a href="#orgc4b8bfb">16. lang.java.feat.abstract<sub>class</sub>&#x2013;Mechanism between Class and Interface</a>
+<li><a href="#org9ac8788">14. lang.java.feat.static_nested_class&#x2013;As the same as top-level class but nested</a></li>
+<li><a href="#org1f16459">15. lang.java.feat.interface&#x2013;Define behavior of code but no implementation</a></li>
+<li><a href="#org6aa7135">16. lang.java.feat.abstract_class&#x2013;Mechanism between Class and Interface</a>
 <ul>
-<li><a href="#org25c7e77">16.1. abstract-template-pattern</a></li>
-<li><a href="#orgf759907">16.2. Reference</a></li>
+<li><a href="#org4bed151">16.1. abstract-template-pattern</a></li>
+<li><a href="#org744f3ad">16.2. Reference</a></li>
 </ul>
 </li>
-<li><a href="#orgddf7935">17. lang.java.feat.dynamic<sub>proxy</sub>&#x2013;Mechanism to append feature to existed code</a></li>
-<li><a href="#org8da09fb">18. lang.java.feat.lambda&#x2013;Syntactic sugar of anonymous class</a>
+<li><a href="#orgb090c13">17. lang.java.feat.dynamic_proxy&#x2013;Mechanism to append feature to existed code</a></li>
+<li><a href="#org90ba124">18. lang.java.feat.lambda&#x2013;Syntactic sugar of anonymous class</a>
 <ul>
-<li><a href="#orgb89d467">18.1. lang.java.feat.lambda.method-qoute</a></li>
-<li><a href="#orgf4fd1c6">18.2. Functional Interface</a></li>
+<li><a href="#org7da9abf">18.1. lang.java.feat.lambda.method-qoute</a></li>
+<li><a href="#org8e1854f">18.2. Functional Interface</a></li>
 </ul>
 </li>
-<li><a href="#org103535f">19. brochure.java.feat.optional&#x2013;Return-default-if-object-null</a></li>
-<li><a href="#org9c5938e">20. lang.java.feat.stream.collectors</a>
+<li><a href="#org62a26e2">19. brochure.java.feat.optional&#x2013;Return-default-if-object-null</a></li>
+<li><a href="#orgea5ea5c">20. lang.java.feat.stream.collectors</a>
 <ul>
-<li><a href="#org439f0d5">20.1. brochure</a></li>
+<li><a href="#orge126796">20.1. brochure</a></li>
 </ul>
 </li>
-<li><a href="#orgec3b4ea">21. Reference</a></li>
-<li><a href="#orgb4272b3">22. Update</a></li>
+<li><a href="#org8adf261">21. Reference</a></li>
+<li><a href="#orgcf3f5b8">22. Update</a></li>
 </ul>
 </div>
 </nav>
 
-
-<div id="outline-container-orgd9e4476" class="outline-2">
-<h2 id="orgd9e4476"><span class="section-number-2">1.</span> programming.semantics</h2>
+<div id="outline-container-org754e5cf" class="outline-2">
+<h2 id="org754e5cf"><span class="section-number-2">1.</span> programming.semantics</h2>
 <div class="outline-text-2" id="text-1">
 <blockquote>
 <p>
@@ -131,7 +130,7 @@ Semantics in programming refers to the meaning or behavior associated with a pie
 </p>
 
 <p>
-比如，一个<a href="#org7a89ec3">lang.java.feat.interface</a>关键字所蕴含的语义是非常丰富的。interface 的语义可以是一种「契约」（ contract ），体现的是实现该 interface 的 class 具备什么样的能力，「即能做什么」。另外，interface 还可以是实现多继承的机制，通过实现多个 interface ，一个 class可以具备不同类型的能力。除此之外，接口的多实现展现了多态。通过持有多态引用（polymorphic reference），可以获得具备多种实现的通用代码，即多态。
+比如，一个 <a href="#org1f16459">lang.java.feat.interface</a> 关键字所蕴含的语义是非常丰富的。interface 的语义可以是一种「契约」（contract），体现的是实现该 interface 的 class 具备什么样的能力，「即能做什么」。另外，interface 还可以是实现多继承的机制，通过实现多个 interface，一个 class 可以具备不同类型的能力。除此之外，接口的多实现展现了多态。通过持有多态引用（polymorphic reference），可以获得具备多种实现的通用代码，即多态。
 </p>
 
 <p>
@@ -140,15 +139,15 @@ Semantics in programming refers to the meaning or behavior associated with a pie
 </div>
 </div>
 
-<div id="outline-container-org0731022" class="outline-2">
-<h2 id="org0731022"><span class="section-number-2">2.</span> lang.java.class.life-circle</h2>
+<div id="outline-container-orgf4d0365" class="outline-2">
+<h2 id="orgf4d0365"><span class="section-number-2">2.</span> lang.java.class.life-circle</h2>
 <div class="outline-text-2" id="text-2">
 <p>
-为了行文方便，后续简称「 Java 类」为「类」。
+为了行文方便，后续简称 「Java 类」为「类」。
 </p>
 
 <p>
-什么是 =Java Classes=？在定义一个「类」的时候，会看到：
+什么是 <code>Java Classes</code> ？在定义一个「类」的时候，会看到：
 </p>
 
 <div class="org-src-container">
@@ -159,15 +158,15 @@ Semantics in programming refers to the meaning or behavior associated with a pie
 </div>
 
 <p>
-<code>class</code> 语法关键字，定义一个「类」，即 <a href="#org6575cdb">Java 对象（ Object ）</a> 的模板。「类」的存在形式是什么？根据不同的存在形式，就有了「类」的生命周期。
+<code>class</code> 语法关键字，定义一个「类」，即 <a href="#org8132509">Java 对象（Object）</a> 的模板。「类」的存在形式是什么？根据不同的存在形式，就有了「类」的生命周期。
 </p>
 
 <p>
-在 Java 程序的视角下：1) 编写代码时，「类」以<code>.java</code>文件的形式是存储在硬盘中；2) 程序编译后，「类」以<code>.class</code>二进制文本的形式（字节码）存储于硬盘中；3) 程序运行时，「类」放置于 JVM 分配的内存中。
+在 Java 程序的视角下：1) 编写代码时，「类」以 <code>.java</code> 文件的形式是存储在硬盘中；2) 程序编译后，「类」以 <code>.class</code> 二进制文本的形式（字节码）存储于硬盘中；3) 程序运行时，「类」放置于 JVM 分配的内存中。
 </p>
 
 <p>
-可以知道的是，虽然类存储的形式不同了，但是，表示的含义是一样的，即<code>描述 Java对象的数据结构，定义了对象的状态以及行为</code> 。
+可以知道的是，虽然类存储的形式不同了，但是，表示的含义是一样的，即 <code>描述 Java 对象的数据结构，定义了对象的状态以及行为</code> 。
 </p>
 
 <p>
@@ -175,51 +174,57 @@ Semantics in programming refers to the meaning or behavior associated with a pie
 </p>
 
 <p>
-类的生杀大权掌握在&ldquo;判官&rdquo; Java 虚拟机（ JVM ）手上。
+类的生杀大权掌握在&ldquo;判官&rdquo; Java 虚拟机（JVM）手上。
 </p>
 
 
-<figure id="orgab63fb3">
+<figure id="orgf03a9ca">
 <img src="atta_Java_类的生命周期/2022-07-05_16-08-09_screenshot.png" alt="2022-07-05_16-08-09_screenshot.png">
 
 </figure>
 </div>
 
-<div id="outline-container-org68b126f" class="outline-3">
-<h3 id="org68b126f"><span class="section-number-3">2.1.</span> 加载：查找字节码文件并载入内存</h3>
+<div id="outline-container-org0ea31a2" class="outline-3">
+<h3 id="org0ea31a2"><span class="section-number-3">2.1.</span> 加载：查找字节码文件并载入内存</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
-在程序编译后，JVM 首先需要根据唯一标识的类名找到<code>.class</code>文件，然后将文件中静态的数据结构，转换为 JVM 运行时所规范的数据结构，放入 JVM 内存的方法区中。并且根据数据结构生成一个<code>Class&lt;T&gt;</code>对象，放置于 JVM 内存的堆区。
+在程序编译后，JVM 首先需要根据唯一标识的类名找到 <code>.class</code> 文件，然后将文件中静态的数据结构，转换为 JVM 运行时所规范的数据结构，放入 JVM 内存的方法区中。并且根据数据结构生成一个 <code>Class&lt;T&gt;</code> 对象，放置于 JVM 内存的堆区。
 </p>
 
 
-<figure id="org967a6f2">
+<figure id="orge1c6220">
 <img src="atta_Java_类的生命周期/2022-07-05_15-41-38_screenshot.png" alt="2022-07-05_15-41-38_screenshot.png">
 
 </figure>
 
 
-<figure id="org3316adb">
+<figure id="org285d06d">
 <img src="atta_Java_类的生命周期/2022-07-05_class_loader.png" alt="2022-07-05_class_loader.png">
 
 </figure>
 </div>
 </div>
 
-<div id="outline-container-org3c05680" class="outline-3">
-<h3 id="org3c05680"><span class="section-number-3">2.2.</span> 连接</h3>
+<div id="outline-container-org0e8b5e0" class="outline-3">
+<h3 id="org0e8b5e0"><span class="section-number-3">2.2.</span> 连接</h3>
 <div class="outline-text-3" id="text-2-2">
+<p>
+替换全局变量的一个过程。
+</p>
+
 <ol class="org-ol">
 <li>验证类的安全性；</li>
-<li>为类的静态变量分配内存并初始化为 JVM 默认值。比如基本类型，整数为 0 ，引用型为 <code>null=，对于 =final static</code>修饰的常量则会被赋值（用户定义的值）后放入到常量池中；</li>
+
+<li>为类的静态变量分配内存并初始化为 JVM 默认值。比如基本类型，整数为 0，引用型为 <code>null</code> ，对于 <code>final static</code> 修饰的常量则会被赋值（用户定义的值）后放入到常量池中；</li>
+
 <li>替换符号引用，比如类名，字段，方法名等符号替换成类似 <code>0X21344</code> 全局唯一的引用标识
 ps: 在 debug 中就能看到每个变量的全局标识。</li>
 </ol>
 </div>
 </div>
 
-<div id="outline-container-org672bc69" class="outline-3">
-<h3 id="org672bc69"><span class="section-number-3">2.3.</span> 初始化</h3>
+<div id="outline-container-org90f1b80" class="outline-3">
+<h3 id="org90f1b80"><span class="section-number-3">2.3.</span> 初始化</h3>
 <div class="outline-text-3" id="text-2-3">
 <p>
 初始化类变量，为静态变量赋予用户定义的初值，初始化父类的方法等。
@@ -227,7 +232,7 @@ ps: 在 debug 中就能看到每个变量的全局标识。</li>
 
 <blockquote>
 <ul class="org-ul">
-<li>创建类的实例，也就是 new 的方式</li>
+<li>创建类的实例，也就是new的方式</li>
 <li>访问某个类或接口的静态变量，或者对该静态变量赋值</li>
 <li>调用类的静态方法</li>
 <li>反射(如Class.forName(&ldquo;com.pdai.jvm.Test&rdquo;))</li>
@@ -238,8 +243,8 @@ ps: 在 debug 中就能看到每个变量的全局标识。</li>
 </div>
 </div>
 
-<div id="outline-container-org18c2bdd" class="outline-3">
-<h3 id="org18c2bdd"><span class="section-number-3">2.4.</span> 卸载</h3>
+<div id="outline-container-orge94b733" class="outline-3">
+<h3 id="orge94b733"><span class="section-number-3">2.4.</span> 卸载</h3>
 <div class="outline-text-3" id="text-2-4">
 <p>
 在使用结束后，将类从 JVM 中卸载。其包括正常退出结束和异常结束导致卸载。
@@ -247,15 +252,15 @@ ps: 在 debug 中就能看到每个变量的全局标识。</li>
 </div>
 </div>
 
-<div id="outline-container-org19b0f04" class="outline-3">
-<h3 id="org19b0f04"><span class="section-number-3">2.5.</span> 参见：<a href="https://pdai.tech/md/java/jvm/java-jvm-classload.html">https://pdai.tech/md/java/jvm/java-jvm-classload.html</a></h3>
+<div id="outline-container-org3344549" class="outline-3">
+<h3 id="org3344549"><span class="section-number-3">2.5.</span> 参见：<a href="https://pdai.tech/md/java/jvm/java-jvm-classload.html">https://pdai.tech/md/java/jvm/java-jvm-classload.html</a></h3>
 </div>
 </div>
-<div id="outline-container-org6575cdb" class="outline-2">
-<h2 id="org6575cdb"><span class="section-number-2">3.</span> lang.java.concept.object&#x2013;abstraction of code</h2>
+<div id="outline-container-org8132509" class="outline-2">
+<h2 id="org8132509"><span class="section-number-2">3.</span> lang.java.concept.object&#x2013;abstraction of code</h2>
 <div class="outline-text-2" id="text-3">
 <p>
-<code>Object</code> 在 Java 中是一种代码抽象的基本单位。抽象是<a href="#org356edf0">面向对象编程</a>的核心，其基础是现实世界到计算机世界中对象的映射。【这里的对象其实是理解现实世界的一种途径（颇有哲学意味的话题）。】
+<code>Object</code> 在 Java 中是一种代码抽象的基本单位。抽象是 <a href="#org254fad8">面向对象编程</a> 的核心，其基础是现实世界到计算机世界中对象的映射。【这里的对象其实是理解现实世界的一种途径（颇有哲学意味的话题）。】
 </p>
 
 <p>
@@ -267,7 +272,7 @@ ps: 在 debug 中就能看到每个变量的全局标识。</li>
 </p>
 
 <p>
-Java 使用 <code>class</code> 作为 Object 的模板，提供定义 Object 状态和方法的途径。通过对模板实例化得到一个具体的<code>Object~，也就是 ~class</code>实例（ instance ）。如何定义一个<code>Java class</code>呢？使用 <code>class</code> 关键字可以定义一个 =Java class=。
+Java 使用 <code>class</code> 作为 Object 的模板，提供定义 Object 状态和方法的途径。通过对模板实例化得到一个具体的 <code>Object</code> ，也就是 <code>class</code> 实例（instance）。如何定义一个 <code>Java class</code> 呢？使用 <code>class</code> 关键字可以定义一个 =Java class=。
 </p>
 
 <div class="org-src-container">
@@ -294,15 +299,15 @@ Java 使用 <code>class</code> 作为 Object 的模板，提供定义 Object 状
 </p>
 </div>
 
-<div id="outline-container-org214b58d" class="outline-3">
-<h3 id="org214b58d"><span class="section-number-3">3.1.</span> equals-hashCode-override</h3>
+<div id="outline-container-orgbb19382" class="outline-3">
+<h3 id="orgbb19382"><span class="section-number-3">3.1.</span> equals-hashCode-override</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
-这四个东西，在自定义对象的时候似乎有时需要覆写或传入（ Comparator ），有时似乎又不用。
+这四个东西，在自定义对象的时候似乎有时需要覆写或传入（Comparator），有时似乎又不用。
 </p>
 
 <p>
-equals() 是继承自老祖宗<code>Object~。所有的对象都继承自 ~Object~，所以所有对象都有一个默认对比对象 hash值的~equals()</code>方法。
+equals() 是继承自老祖宗 <code>Object</code> 。所有的对象都继承自 <code>Object</code> ，所以所有对象都有一个默认对比对象 hash 值的 <code>equals()</code> 方法。
 </p>
 
 <p>
@@ -318,7 +323,7 @@ todo: 补充其他方法的简介
 </p>
 
 <p>
-场景 2 ：当需要为一个对象生成一个唯一标识的时候，比如 Map集合中，要确定唯一的键值（ key ）的时候。则 Map 中放入的对象需要覆写hashCode()方法。如果实现的hashCode()生成对象的 hashCode 越唯一，Map 的查找效率就越高。
+场景 2：当需要为一个对象生成一个唯一标识的时候，比如 Map 集合中，要确定唯一的键值（key）的时候。则 Map 中放入的对象需要覆写 hashCode() 方法。如果实现的 hashCode() 生成对象的 hashCode 越唯一，Map 的查找效率就越高。
 </p>
 
 <p>
@@ -327,7 +332,7 @@ todo: 补充其他方法的简介
 
 
 <p>
-如果要用一个 List 来存储你自定义的对象，那么，当要使用 List 中的<code>contains()</code>或 <code>indexOf()~，那么就必须实现。因为这些方法利用~equals</code>方法来判定对象是否相等。
+如果要用一个 List 来存储你自定义的对象，那么，当要使用 List 中的 <code>contains()</code> 或 <code>indexOf()</code> ，那么就必须实现。因为这些方法利用 <code>equals</code> 方法来判定对象是否相等。
 </p>
 
 <p>
@@ -335,21 +340,21 @@ todo: 补充其他方法的简介
 </p>
 
 <p>
-因此，我们总结一下equals()方法的正确编写方法：
+因此，我们总结一下 equals() 方法的正确编写方法：
 </p>
 
 <ol class="org-ol">
 <li>先确定实例“相等”的逻辑，即哪些字段相等，就认为实例相等；</li>
 <li>用 <code>instanceof</code> 判断传入的待比较的 Object 是不是当前类型，如果是，继续比较，否则，返回 ~false~；</li>
-<li>对引用类型用<code>Objects.equals()</code>比较，对基本类型直接用==比较。</li>
+<li>对引用类型用 <code>Objects.equals()</code> 比较，对基本类型直接用==比较。</li>
 </ol>
 
 <p>
-*使用<code>Objects.equals()</code>比较两个引用类型是否相等的目的是省去了判断 null 的麻烦。两个引用类型都是 null 时它们也是相等的*。
+<b>使用 <code>Objects.equals()</code> 比较两个引用类型是否相等的目的是省去了判断 null 的麻烦。两个引用类型都是 null 时它们也是相等的</b> 。
 </p>
 
 <p>
-如果不调用 List 的 contains()、indexOf() 这些方法，那么放入的元素就不需要实现equals()方法。
+如果不调用 List 的 contains()、indexOf() 这些方法，那么放入的元素就不需要实现 equals() 方法。
 </p>
 
 <p>
@@ -358,8 +363,8 @@ todo: 补充其他方法的简介
 </div>
 </div>
 
-<div id="outline-container-org927c304" class="outline-3">
-<h3 id="org927c304"><span class="section-number-3">3.2.</span> 参见：</h3>
+<div id="outline-container-org6eeacfe" class="outline-3">
+<h3 id="org6eeacfe"><span class="section-number-3">3.2.</span> 参见：</h3>
 <div class="outline-text-3" id="text-3-2">
 <ul class="org-ul">
 <li><a href="https://docs.oracle.com/javase/tutorial/java/concepts/object.html">https://docs.oracle.com/javase/tutorial/java/concepts/object.html</a></li>
@@ -369,13 +374,13 @@ todo: 补充其他方法的简介
 </div>
 </div>
 
-<div id="outline-container-org1cd6382" class="outline-2">
-<h2 id="org1cd6382"><span class="section-number-2">4.</span> lang.java.concept.classpath&#x2013;url to locate class</h2>
+<div id="outline-container-org1f7768f" class="outline-2">
+<h2 id="org1f7768f"><span class="section-number-2">4.</span> lang.java.concept.classpath&#x2013;url to locate class</h2>
 <div class="outline-text-2" id="text-4">
 <blockquote>
 <p>
-首先你要知道 java 这个指令是作什麽用的？
-<b>执行 java ，其实就是启动 JVM ，之后接下类别名称，表示由 JVM 载入该类别的.class并执行。</b>
+首先你要知道java这个指令是作什麽用的？
+<b>执行java，其实就是启动JVM，之后接下类别名称，表示由JVM载入该类别的.class并执行。</b>
 </p>
 </blockquote>
 
@@ -384,15 +389,15 @@ todo: 补充其他方法的简介
 </p>
 
 <p>
-Class 是字节码文件，Java 启动的过程就是，启动 Jvm 虚拟机然后加载.class文件执行。
+Class 是字节码文件，Java 启动的过程就是，启动 Jvm 虚拟机然后加载 .class 文件执行。
 </p>
 
 <p>
-CLASSPATH 其实就是告诉 Jvm 在哪里找到所需要的.class文件。
+CLASSPATH 其实就是告诉 Jvm 在哪里找到所需要的 .class 文件。
 </p>
 
 <p>
-所以，用 Java 命令执行 Jar 压缩包里面的类时，需要使用-classpath(-cp)参数指定.class文件的位置。
+所以，用 Java 命令执行 Jar 压缩包里面的类时，需要使用 -classpath(-cp) 参数指定 .class 文件的位置。
 </p>
 
 <pre class="example">
@@ -401,8 +406,8 @@ java -cp target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
 </pre>
 </div>
 
-<div id="outline-container-org843585c" class="outline-3">
-<h3 id="org843585c"><span class="section-number-3">4.1.</span> 方法参数传递</h3>
+<div id="outline-container-orga247941" class="outline-3">
+<h3 id="orga247941"><span class="section-number-3">4.1.</span> 方法参数传递</h3>
 <div class="outline-text-3" id="text-4-1">
 <ul class="org-ul">
 <li>基本类型参数的传递，是调用方值的复制。双方各自的后续修改，互不影响。</li>
@@ -411,29 +416,29 @@ java -cp target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
 </div>
 </div>
 
-<div id="outline-container-org02d5922" class="outline-3">
-<h3 id="org02d5922"><span class="section-number-3">4.2.</span> References</h3>
+<div id="outline-container-orgcc8b54d" class="outline-3">
+<h3 id="orgcc8b54d"><span class="section-number-3">4.2.</span> References</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
-良葛格(2014) CLASSPATH是什麼？, OPENHOME.CC. Available at: <a href="https://openhome.cc/Gossip/JavaEssence/WhatClasspath.html">https://openhome.cc/Gossip/JavaEssence/WhatClasspath.html</a> (Accessed: 2 March 2022).
+良葛格 (2014) CLASSPATH 是什麼？, OPENHOME.CC. Available at: <a href="https://openhome.cc/Gossip/JavaEssence/WhatClasspath.html">https://openhome.cc/Gossip/JavaEssence/WhatClasspath.html</a> (Accessed: 2 March 2022).
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org356edf0" class="outline-2">
-<h2 id="org356edf0"><span class="section-number-2">5.</span> lang.java.concept.object<sub>oriented</sub><sub>programming</sub>&#x2013;code abstraction base on object</h2>
+<div id="outline-container-org254fad8" class="outline-2">
+<h2 id="org254fad8"><span class="section-number-2">5.</span> lang.java.concept.object_oriented_programming&#x2013;code abstraction base on object</h2>
 <div class="outline-text-2" id="text-5">
 <p>
-面向对象是一种编程范式，以<a href="#org6575cdb">lang.java.object</a>为基本单位提供代码抽象的模式。
+面向对象是一种编程范式，以 <a href="#org8132509">lang.java.object</a> 为基本单位提供代码抽象的模式。
 </p>
 
 <p>
-面向对象的核心是抽象。为了保证抽象这一特性，Java 提供封装、<a href="#orgd3b49cf">lang.java.feat.inheritance&#x2013;mechanism to reuse code (field-method)</a>和 <a href="#org1afa784">lang.java.feat.polymorphism&#x2013;mechanism-to-seperate-code</a>。
+面向对象的核心是抽象。为了保证抽象这一特性，Java 提供封装、<a href="#orgc36b931">lang.java.feat.inheritance&#x2013;mechanism to reuse code (field-method) </a>和 <a href="#orgc027445">lang.java.feat.polymorphism&#x2013;mechanism-to-seperate-code</a>。
 </p>
 </div>
-<div id="outline-container-org84bc2b4" class="outline-3">
-<h3 id="org84bc2b4"><span class="section-number-3">5.1.</span> Encapsulation</h3>
+<div id="outline-container-org0d8c456" class="outline-3">
+<h3 id="org0d8c456"><span class="section-number-3">5.1.</span> Encapsulation</h3>
 <div class="outline-text-3" id="text-5-1">
 <p>
 一个典型的对象包含「状态」和「行为」，通过对象提供的行为（方法），可以改变对象内部的状态（字段）。以对象为基本单位编程，对外提供编写者希望暴露的方法，隐藏对象内部的实现细节。这就是封装。
@@ -441,8 +446,8 @@ java -cp target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
 </div>
 </div>
 
-<div id="outline-container-org23354c4" class="outline-3">
-<h3 id="org23354c4"><span class="section-number-3">5.2.</span> Reference</h3>
+<div id="outline-container-org58b3fcb" class="outline-3">
+<h3 id="org58b3fcb"><span class="section-number-3">5.2.</span> Reference</h3>
 <div class="outline-text-3" id="text-5-2">
 <blockquote>
 <p>
@@ -463,8 +468,8 @@ everywhere. - <a href="https://www.startertutorials.com/corejava/object-orientat
 </div>
 </div>
 
-<div id="outline-container-orgd3b49cf" class="outline-2">
-<h2 id="orgd3b49cf"><span class="section-number-2">6.</span> lang.java.feat.inheritance&#x2013;Mechanism to reuse code (field-method)</h2>
+<div id="outline-container-orgc36b931" class="outline-2">
+<h2 id="orgc36b931"><span class="section-number-2">6.</span> lang.java.feat.inheritance&#x2013;Mechanism to reuse code (field-method)</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 假设在定义三个不同的类，它们拥有相同的 100 个属性，只有 3 个属性不同。如果每个类都需要写 100 个字段，这样会产生两倍的冗余代码，有什么办法可以解决呢？
@@ -528,8 +533,8 @@ everywhere. - <a href="https://www.startertutorials.com/corejava/object-orientat
 </div>
 </div>
 
-<div id="outline-container-org65065a6" class="outline-3">
-<h3 id="org65065a6"><span class="section-number-3">6.1.</span> inheritance.method-call-priority</h3>
+<div id="outline-container-org32a0bc8" class="outline-3">
+<h3 id="org32a0bc8"><span class="section-number-3">6.1.</span> inheritance.method-call-priority</h3>
 <div class="outline-text-3" id="text-6-1">
 <blockquote>
 <p>
@@ -542,7 +547,7 @@ everywhere. - <a href="https://www.startertutorials.com/corejava/object-orientat
 </blockquote>
 
 <p>
-在调用对象的实例方法时，Java 编译器如何找到实际的调用方法呢？这里涉及到继承链的方法调用优先级。假设调用的方法是<code>show(object)</code>， <code>object</code> 是一个对象。 1 ）优先调用 this中的方法； 2 ）如果 this 中不存在<code>show(object)，则调用=super.show(object)</code>； 3 ）既然关于<code>show(object)</code>方法都不存在于继承链中，那么就尝试将参数 <code>object</code> 向上转型。再尝试调用<code>this.show((super)object)</code>。 4 ）如果 this 还是不存在关于<code>super.show(object)</code>的方法，则调用<code>super.show((super)object)</code>。既然编译器尝试向上寻找那么多次都没有办法找到方法，则判定方法未定义，编译错误。
+在调用对象的实例方法时，Java 编译器如何找到实际的调用方法呢？这里涉及到继承链的方法调用优先级。假设调用的方法是 <code>show(object)</code> ， <code>object</code> 是一个对象。 1）优先调用 this 中的方法；2）如果 this 中不存在 <code>show(object) ，则调用 =super.show(object)</code> ；3）既然关于 <code>show(object)</code> 方法都不存在于继承链中，那么就尝试将参数 <code>object</code> 向上转型。再尝试调用 <code>this.show((super)object)</code> 。4）如果 this 还是不存在关于 <code>super.show(object)</code> 的方法，则调用 <code>super.show((super)object)</code> 。既然编译器尝试向上寻找那么多次都没有办法找到方法，则判定方法未定义，编译错误。
 </p>
 
 <p>
@@ -648,18 +653,18 @@ everywhere. - <a href="https://www.startertutorials.com/corejava/object-orientat
 </div>
 </div>
 </div>
-<div id="outline-container-org1afa784" class="outline-2">
-<h2 id="org1afa784"><span class="section-number-2">7.</span> lang.java.feat.polymorphism&#x2013;Mechanism-to-seperate-code</h2>
+<div id="outline-container-orgc027445" class="outline-2">
+<h2 id="orgc027445"><span class="section-number-2">7.</span> lang.java.feat.polymorphism&#x2013;Mechanism-to-seperate-code</h2>
 <div class="outline-text-2" id="text-7">
 <ul class="org-ul">
-<li>子类可以覆写父类的方法（ Override ），覆写在子类中改变了父类方法的行为；</li>
+<li>子类可以覆写父类的方法（Override），覆写在子类中改变了父类方法的行为；</li>
 
 <li>Java的方法调用总是作用于运行期对象的实际类型，这种行为称为多态；</li>
 </ul>
 </div>
 
-<div id="outline-container-orgc83fe72" class="outline-3">
-<h3 id="orgc83fe72"><span class="section-number-3">7.1.</span> 多态意味着面向抽象编程</h3>
+<div id="outline-container-org9fde269" class="outline-3">
+<h3 id="org9fde269"><span class="section-number-3">7.1.</span> 多态意味着面向抽象编程</h3>
 <div class="outline-text-3" id="text-7-1">
 <p>
 抽象类设置一种规范，继承该抽象类的子类必须覆写其抽象方法。
@@ -695,20 +700,21 @@ everywhere. - <a href="https://www.startertutorials.com/corejava/object-orientat
 </div>
 </div>
 
-<div id="outline-container-org52c7bc0" class="outline-3">
-<h3 id="org52c7bc0"><span class="section-number-3">7.2.</span> polymorphism.example</h3>
+<div id="outline-container-org1b8e411" class="outline-3">
+<h3 id="org1b8e411"><span class="section-number-3">7.2.</span> polymorphism.example</h3>
 <div class="outline-text-3" id="text-7-2">
 <ol class="org-ol">
 <li>使用集合接口接收实现了该接口的对象。接口越抽象，代码复用度和代码封装得越好。</li>
-<li>使用迭代器（ Iterator ）遍历集合对象，集合们各自实现了高效的遍历方式，调用者使用迭代器不需要知道迭代器实现的细节。</li>
-<li>设计模式 - 工厂和设计模式 - 策略 均运用了多态。通过持有抽象接口，接收实现类型而返回具体的实现。</li>
+<li>使用迭代器（Iterator）遍历集合对象，集合们各自实现了高效的遍历方式，调用者使用迭代器不需要知道迭代器实现的细节。</li>
+<li>设计模式-工厂 和 设计模式-策略 均运用了多态。
+通过持有抽象接口，接收实现类型而返回具体的实现。</li>
 </ol>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org46cd96e" class="outline-2">
-<h2 id="org46cd96e"><span class="section-number-2">8.</span> lang.java.feat.auto<sub>boxing</sub>&#x2013;Box of basic data type</h2>
+<div id="outline-container-org7d3987c" class="outline-2">
+<h2 id="org7d3987c"><span class="section-number-2">8.</span> lang.java.feat.auto_boxing&#x2013;Box of basic data type</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 包装类是将基本变量类型用类包装起来。
@@ -719,7 +725,7 @@ everywhere. - <a href="https://www.startertutorials.com/corejava/object-orientat
 </p>
 
 <div class="org-src-container">
-<pre class="src src-java" id="org67ee365"><span style="color: #9A93E1;">public</span> <span style="color: #9A93E1;">static</span> <span style="color: #A8CE93;">void</span> <span style="color: #83AFE5;">main</span>(<span style="color: #A8CE93;">String</span>[] <span style="color: #DF8C8C;">args</span>) {
+<pre class="src src-java" id="org2eb726e"><span style="color: #9A93E1;">public</span> <span style="color: #9A93E1;">static</span> <span style="color: #A8CE93;">void</span> <span style="color: #83AFE5;">main</span>(<span style="color: #A8CE93;">String</span>[] <span style="color: #DF8C8C;">args</span>) {
     <span style="color: #A8CE93;">int</span> <span style="color: #DF8C8C;">i</span> = <span style="color: #7FC1CA; font-weight: bold;">100</span>;
     <span style="color: #899BA6;">// </span><span style="color: #899BA6;">&#36890;&#36807;new&#25805;&#20316;&#31526;&#21019;&#24314;Integer&#23454;&#20363;(&#19981;&#25512;&#33616;&#20351;&#29992;,&#20250;&#26377;&#32534;&#35793;&#35686;&#21578;):</span>
     <span style="color: #A8CE93;">Integer</span> <span style="color: #DF8C8C;">n1</span> = <span style="color: #9A93E1;">new</span> <span style="color: #A8CE93;">Integer</span>(i);
@@ -746,18 +752,18 @@ everywhere. - <a href="https://www.startertutorials.com/corejava/object-orientat
 <li>Integer == Integer：会以 Integer 的形式比较，*比较对象的地址*
 <ol class="org-ol">
 <li>new 是一定返回一个新的对象</li>
-<li>valueOf（静态工厂方法）在[-128，127]之内会返回同一缓存对象，超过此范围返回一个新对象。</li>
+<li>valueOf（静态工厂方法）在 [-128，127] 之内会返回同一缓存对象，超过此范围返回一个新对象。</li>
 </ol></li>
 <li>包装类是对象，所以需要使用 equals 进行判等</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgeb75c2b" class="outline-2">
-<h2 id="orgeb75c2b"><span class="section-number-2">9.</span> lang.java.feat.reflection&#x2013;Mechanism to manipulate class</h2>
+<div id="outline-container-org2bdf07f" class="outline-2">
+<h2 id="org2bdf07f"><span class="section-number-2">9.</span> lang.java.feat.reflection&#x2013;Mechanism to manipulate class</h2>
 <div class="outline-text-2" id="text-9">
 <p>
-在知道什么是反射前，需要了解一下 <a href="#org0731022">Java 类的生命周期</a>。
+在知道什么是反射前，需要了解一下 <a href="#orgf4d0365">Java 类的生命周期</a>。
 </p>
 
 <p>
@@ -765,11 +771,11 @@ Java 程序的生命周期包括：编写、编译、运行（在 JVM 上运行�
 </p>
 
 <p>
-反射能让 Java 程序在获取一个运行期间 <a href="#org6575cdb">Java 对象（ Object ）</a> 的所有信息。比如，字段和方法。
+反射能让 Java 程序在获取一个运行期间 <a href="#org8132509">Java 对象（Object）</a> 的所有信息。比如，字段和方法。
 </p>
 
 <p>
-class 的生命周期包括加载、链接、初始化、使用和卸载。在程序运行期间，如果 JVM 需要使用到某个class A时，会加载类 A 。加载类 A时会创建一个<code>Class&lt;A&gt;</code>类来记录类 A 所有的信息。
+class 的生命周期包括加载、链接、初始化、使用和卸载。在程序运行期间，如果 JVM 需要使用到某个 class A 时，会加载类 A。加载类 A 时会创建一个 <code>Class&lt;A&gt;</code> 类来记录类 A 所有的信息。
 </p>
 
 <p>
@@ -777,15 +783,15 @@ class 的生命周期包括加载、链接、初始化、使用和卸载。在�
 </p>
 
 <p>
-Java 通过java.lang.reflect包提供操纵 Class 对象的 API。
+Java 通过 java.lang.reflect 包提供操纵 Class 对象的 API。
 </p>
 </div>
 
-<div id="outline-container-org4e4417f" class="outline-3">
-<h3 id="org4e4417f"><span class="section-number-3">9.1.</span> 获取「类」的 Class&lt;T&gt; 对象</h3>
+<div id="outline-container-org03575bb" class="outline-3">
+<h3 id="org03575bb"><span class="section-number-3">9.1.</span> 获取「类」的 Class&lt;T&gt; 对象</h3>
 <div class="outline-text-3" id="text-9-1">
 <p>
-方法一：直接通过一个 class 的静态变量 class 获取：
+方法一：直接通过一个class的静态变量class获取：
 </p>
 
 <p>
@@ -802,7 +808,7 @@ Java 通过java.lang.reflect包提供操纵 Class 对象的 API。
 </p>
 
 <p>
-方法三：如果知道一个 class 的完整类名，可以通过静态方法Class.forName()获取：
+方法三：如果知道一个class的完整类名，可以通过静态方法Class.forName()获取：
 </p>
 
 <p>
@@ -811,8 +817,8 @@ Java 通过java.lang.reflect包提供操纵 Class 对象的 API。
 </div>
 </div>
 
-<div id="outline-container-orge9f14e4" class="outline-3">
-<h3 id="orge9f14e4"><span class="section-number-3">9.2.</span> 操作字段通过 Class&lt;T&gt; 中的 Field 相关方法</h3>
+<div id="outline-container-orgb860f6e" class="outline-3">
+<h3 id="orgb860f6e"><span class="section-number-3">9.2.</span> 操作字段通过 Class&lt;T&gt; 中的 Field 相关方法</h3>
 <div class="outline-text-3" id="text-9-2">
 <p>
 参见：<a href="https://www.liaoxuefeng.com/wiki/1252599548343744/1264803678201760">反射字段-lxf</a>
@@ -820,8 +826,8 @@ Java 通过java.lang.reflect包提供操纵 Class 对象的 API。
 </div>
 </div>
 
-<div id="outline-container-org1c6f92b" class="outline-3">
-<h3 id="org1c6f92b"><span class="section-number-3">9.3.</span> 操作方法通过 Class&lt;T&gt; 中的 Method 相关方法</h3>
+<div id="outline-container-orgf431c89" class="outline-3">
+<h3 id="orgf431c89"><span class="section-number-3">9.3.</span> 操作方法通过 Class&lt;T&gt; 中的 Method 相关方法</h3>
 <div class="outline-text-3" id="text-9-3">
 <p>
 参见：<a href="https://www.liaoxuefeng.com/wiki/1252599548343744/1264803678201760">反射方法-lxf</a>
@@ -830,11 +836,11 @@ Java 通过java.lang.reflect包提供操纵 Class 对象的 API。
 </div>
 </div>
 
-<div id="outline-container-org74a66dc" class="outline-2">
-<h2 id="org74a66dc"><span class="section-number-2">10.</span> lang.java.feat.access<sub>level</sub><sub>modifiers</sub>&#x2013;Mechanism to restrict scope of access</h2>
+<div id="outline-container-org9221c00" class="outline-2">
+<h2 id="org9221c00"><span class="section-number-2">10.</span> lang.java.feat.access_level_modifiers&#x2013;Mechanism to restrict scope of access</h2>
 <div class="outline-text-2" id="text-10">
 <p>
-Java 使用<code>public~、~private~、~protected</code>和 <code>friendly</code> 对「变量」和「方法」的作用域进行限定。若代码没有使用访问修饰符时，默认作用域为 ~friendly~。
+Java 使用 <code>public~、~private~、~protected</code> 和 <code>friendly</code> 对「变量」和「方法」的作用域进行限定。若代码没有使用访问修饰符时，默认作用域为 ~friendly~。
 </p>
 
 <table>
@@ -895,22 +901,22 @@ Java 使用<code>public~、~private~、~protected</code>和 <code>friendly</code
 </table>
 
 <p>
-作用域范围-&gt;变大。
+作用域范围 -&gt; 变大。
 </p>
 
 <p>
-For accessing to the protected method, one option is using <a href="#org053d832">lang.java.feat.anonymous-class.access-to-protected-method-in-other-package</a>
+For accessing to the protected method, one option is using <a href="#org3e5b81a">lang.java.feat.anonymous-class.access-to-protected-method-in-other-package</a>
 </p>
 </div>
 
-<div id="outline-container-org561b415" class="outline-3">
-<h3 id="org561b415"><span class="section-number-3">10.1.</span> Reference</h3>
+<div id="outline-container-org1937ffb" class="outline-3">
+<h3 id="org1937ffb"><span class="section-number-3">10.1.</span> Reference</h3>
 <div class="outline-text-3" id="text-10-1">
 <ul class="org-ul">
 <li><a href="https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html">Oracle Java Tutorials: Controlling Access to Members of a Class</a></li>
 <li><blockquote>
 <p>
-只要记住了有 4 种访问权限， 4 个访问范围，然后将全选和范围在水平和垂直方向上分别按排从小到大或从大到小的顺序排列，就很容易画出上面的图了。——<a href="https://github.com/CoderLeixiaoshuai/java-eight-part/blob/master/docs/java/base/Java%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A880%E9%97%AE.md#10%E4%BD%BF%E7%94%A8final%E5%85%B3%E9%94%AE%E5%AD%97%E4%BF%AE%E9%A5%B0%E4%B8%80%E4%B8%AA%E5%8F%98%E9%87%8F%E6%97%B6%E6%98%AF%E5%BC%95%E7%94%A8%E4%B8%8D%E8%83%BD%E5%8F%98%E8%BF%98%E6%98%AF%E5%BC%95%E7%94%A8%E7%9A%84%E5%AF%B9%E8%B1%A1%E4%B8%8D%E8%83%BD%E5%8F%98">Java 基础入门 80 问</a>
+只要记住了有4种访问权限，4个访问范围，然后将全选和范围在水平和垂直方向上分别按排从小到大或从大到小的顺序排列，就很容易画出上面的图了。——<a href="https://github.com/CoderLeixiaoshuai/java-eight-part/blob/master/docs/java/base/Java%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A880%E9%97%AE.md#10%E4%BD%BF%E7%94%A8final%E5%85%B3%E9%94%AE%E5%AD%97%E4%BF%AE%E9%A5%B0%E4%B8%80%E4%B8%AA%E5%8F%98%E9%87%8F%E6%97%B6%E6%98%AF%E5%BC%95%E7%94%A8%E4%B8%8D%E8%83%BD%E5%8F%98%E8%BF%98%E6%98%AF%E5%BC%95%E7%94%A8%E7%9A%84%E5%AF%B9%E8%B1%A1%E4%B8%8D%E8%83%BD%E5%8F%98">Java 基础入门 80 问</a>
 </p>
 </blockquote></li>
 </ul>
@@ -918,24 +924,24 @@ For accessing to the protected method, one option is using <a href="#org053d832"
 </div>
 </div>
 
-<div id="outline-container-orgc14983d" class="outline-2">
-<h2 id="orgc14983d"><span class="section-number-2">11.</span> lang.java.feat.exception&#x2013;Mechanism to deal with error of code</h2>
+<div id="outline-container-orgb1e4f6c" class="outline-2">
+<h2 id="orgb1e4f6c"><span class="section-number-2">11.</span> lang.java.feat.exception&#x2013;Mechanism to deal with error of code</h2>
 <div class="outline-text-2" id="text-11">
 </div>
-<div id="outline-container-org410ed0b" class="outline-3">
-<h3 id="org410ed0b"><span class="section-number-3">11.1.</span> lang.java.feat.exception.claim-to-catch</h3>
+<div id="outline-container-orgbe38206" class="outline-3">
+<h3 id="orgbe38206"><span class="section-number-3">11.1.</span> lang.java.feat.exception.claim-to-catch</h3>
 <div class="outline-text-3" id="text-11-1">
 <p>
-异常是一个类。Java 定义了一些常见的错误类型。当一个方法「 throw 」一个异常，则调用该方法时，需要在上层的调用栈中进行异常的捕获，否则代码会编译错误。
+异常是一个类。Java 定义了一些常见的错误类型。当一个方法「throw」一个异常，则调用该方法时，需要在上层的调用栈中进行异常的捕获，否则代码会编译错误。
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgc288183" class="outline-3">
-<h3 id="orgc288183"><span class="section-number-3">11.2.</span> lang.java.feat.exception.type</h3>
+<div id="outline-container-orgd17358f" class="outline-3">
+<h3 id="orgd17358f"><span class="section-number-3">11.2.</span> lang.java.feat.exception.type</h3>
 <div class="outline-text-3" id="text-11-2">
 
-<figure id="org691511e">
+<figure id="orgf4b2ab4">
 <img src="atta_java_基础/2022-03-10_20-09-39_screenshot.png" alt="2022-03-10_20-09-39_screenshot.png">
 
 </figure>
@@ -954,8 +960,8 @@ Exception 分为运行时的错误和非运行时的错误。其中，非运行�
 </div>
 </div>
 
-<div id="outline-container-org4f06c72" class="outline-3">
-<h3 id="org4f06c72"><span class="section-number-3">11.3.</span> lang.java.feat.exception.throw-example</h3>
+<div id="outline-container-org643bd03" class="outline-3">
+<h3 id="org643bd03"><span class="section-number-3">11.3.</span> lang.java.feat.exception.throw-example</h3>
 <div class="outline-text-3" id="text-11-3">
 <ol class="org-ol">
 <li>创建 Exception 的实例。</li>
@@ -985,12 +991,12 @@ Exception 分为运行时的错误和非运行时的错误。其中，非运行�
 </div>
 </div>
 
-<div id="outline-container-org89dd9a6" class="outline-2">
-<h2 id="org89dd9a6"><span class="section-number-2">12.</span> lang.java.feat.anonymous<sub>class</sub>&#x2013;Mechanism to deliver interface to methods</h2>
+<div id="outline-container-org868300c" class="outline-2">
+<h2 id="org868300c"><span class="section-number-2">12.</span> lang.java.feat.anonymous_class&#x2013;Mechanism to deliver interface to methods</h2>
 <div class="outline-text-2" id="text-12">
 </div>
-<div id="outline-container-org25a2882" class="outline-3">
-<h3 id="org25a2882"><span class="section-number-3">12.1.</span> Definition</h3>
+<div id="outline-container-org79c980f" class="outline-3">
+<h3 id="org79c980f"><span class="section-number-3">12.1.</span> Definition</h3>
 <div class="outline-text-3" id="text-12-1">
 <p>
 This code shows that creating an anonymous class means hoding an instance of an interface or an superclass as well as manifesting the abstraction oriented programming. That is to say, an anonymous class is the subtype of a class.
@@ -1048,11 +1054,11 @@ An example of the difference of the definition between a normal local class and 
 </div>
 </div>
 
-<div id="outline-container-org053d832" class="outline-3">
-<h3 id="org053d832"><span class="section-number-3">12.2.</span> Access to protected method in other package</h3>
+<div id="outline-container-org3e5b81a" class="outline-3">
+<h3 id="org3e5b81a"><span class="section-number-3">12.2.</span> Access to protected method in other package</h3>
 <div class="outline-text-3" id="text-12-2">
 <p>
-According the definition, anonymous class have access to the <a href="#org74a66dc">lang.java.feat.access-level-modifiers</a> protected method of the superclass. Because the protected level members allow to be call from the subclass.
+According the definition, anonymous class have access to the <a href="#org9221c00">lang.java.feat.access-level-modifiers</a> protected method of the superclass. Because the protected level members allow to be call from the subclass.
 </p>
 
 <p>
@@ -1098,25 +1104,25 @@ The <code>addAll</code> using a anonymous class to call the protected method <co
 </p>
 </div>
 </div>
-<div id="outline-container-org79a4c2b" class="outline-3">
-<h3 id="org79a4c2b"><span class="section-number-3">12.3.</span> Use Cases</h3>
+<div id="outline-container-orgd9fd6a4" class="outline-3">
+<h3 id="orgd9fd6a4"><span class="section-number-3">12.3.</span> Use Cases</h3>
 <div class="outline-text-3" id="text-12-3">
 <p>
 Use for implementing the methods of a interface, which passes the method implementation as a virtual parameter to a method.
 </p>
 </div>
 </div>
-<div id="outline-container-orgce90bfc" class="outline-3">
-<h3 id="orgce90bfc"><span class="section-number-3">12.4.</span> <a href="#org8da09fb">lang.java.feat.lambda</a> simplifcation-lambda-expression</h3>
+<div id="outline-container-org4272b93" class="outline-3">
+<h3 id="org4272b93"><span class="section-number-3">12.4.</span> <a href="#org90ba124">lang.java.feat.lambda</a> simplifcation-lambda-expression</h3>
 <div class="outline-text-3" id="text-12-4">
 <p>
-<a href="#org8da09fb">lang.java.feat.lambda</a> is just a more simple grammar to ease the code of the anonymous class usage.
+<a href="#org90ba124">lang.java.feat.lambda</a> is just a more simple grammar to ease the code of the anonymous class usage.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org3a4c284" class="outline-3">
-<h3 id="org3a4c284"><span class="section-number-3">12.5.</span> reference</h3>
+<div id="outline-container-orgc080d59" class="outline-3">
+<h3 id="orgc080d59"><span class="section-number-3">12.5.</span> reference</h3>
 <div class="outline-text-3" id="text-12-5">
 <ul class="org-ul">
 <li><a href="https://docs.oracle.com/javase/tutorial/java/javaOO/anonymousclasses.html">https://docs.oracle.com/javase/tutorial/java/javaOO/anonymousclasses.html</a>
@@ -1128,13 +1134,13 @@ A blog introduces the usage of anonymouse classes.</li>
 </div>
 </div>
 
-<div id="outline-container-orga09fe16" class="outline-2">
-<h2 id="orga09fe16"><span class="section-number-2">13.</span> lang.java.feat.nested<sub>class</sub>&#x2013;Way to group class to make code neatter</h2>
+<div id="outline-container-org57b504d" class="outline-2">
+<h2 id="org57b504d"><span class="section-number-2">13.</span> lang.java.feat.nested_class&#x2013;Way to group class to make code neatter</h2>
 <div class="outline-text-2" id="text-13">
 </div>
 
-<div id="outline-container-org68ca4dc" class="outline-3">
-<h3 id="org68ca4dc"><span class="section-number-3">13.1.</span> Why Use Nested Classes?</h3>
+<div id="outline-container-org416d3db" class="outline-3">
+<h3 id="org416d3db"><span class="section-number-3">13.1.</span> Why Use Nested Classes?</h3>
 <div class="outline-text-3" id="text-13-1">
 <blockquote>
 <p>
@@ -1167,19 +1173,19 @@ Divided into two categories: non-static and static, the precede one defined in i
 </p>
 
 <ul class="org-ul">
-<li>`static class` 和`static final class`都表示嵌套类（nested class）的一种形式。
+<li>`static class` 和 `static final class` 都表示嵌套类（nested class）的一种形式。
 <ul class="org-ul">
 <li>`static class` 表示静态嵌套类，是指在外部类中定义的静态内部类。静态内部类不依赖于外部类的实例，可以直接通过外部类名称访问。静态内部类可以拥有静态成员和非静态成员。</li>
 <li>`static final class` 表示静态常量内部类，是指被声明为静态和最终（不可更改）的嵌套类。静态常量内部类通常用于提供只读的常量或者枚举值，并且这些值在整个应用程序中都保持不变。</li>
-<li>总结来说，`static class` 是表示静态嵌套类，而`static final class`是表示静态常量内部类。它们的区别在于是否为最终（ final ）类型以及是否用于表示常量值。
+<li>总结来说，`static class` 是表示静态嵌套类，而 `static final class` 是表示静态常量内部类。它们的区别在于是否为最终（final）类型以及是否用于表示常量值。
 <a href="../../main/20240715224009--brochure_java_constant_class_way_to_hold_constant_value.html#ID-81dec664-08b5-4766-963a-689c8e42bfcc">brochure.java.constant-class</a> 静态内部类用于定义常量类的例子。</li>
 </ul></li>
 </ul>
 </div>
 </div>
 </div>
-<div id="outline-container-org7a325f0" class="outline-2">
-<h2 id="org7a325f0"><span class="section-number-2">14.</span> lang.java.feat.static<sub>nested</sub><sub>class</sub>&#x2013;As the same as top-level class but nested</h2>
+<div id="outline-container-org9ac8788" class="outline-2">
+<h2 id="org9ac8788"><span class="section-number-2">14.</span> lang.java.feat.static_nested_class&#x2013;As the same as top-level class but nested</h2>
 <div class="outline-text-2" id="text-14">
 <p>
 Treated as a top-level class, is independent with the outerclass, but has a more related semantics. That is say, a static nested class has access to the private static variable of the outer class while other top-level class can&rsquo;t do.
@@ -1215,8 +1221,8 @@ For example, to define a linked list node only use by the linked list can use th
 </div>
 </div>
 
-<div id="outline-container-org7a89ec3" class="outline-2">
-<h2 id="org7a89ec3"><span class="section-number-2">15.</span> lang.java.feat.interface&#x2013;Define behavior of code but no implementation</h2>
+<div id="outline-container-org1f16459" class="outline-2">
+<h2 id="org1f16459"><span class="section-number-2">15.</span> lang.java.feat.interface&#x2013;Define behavior of code but no implementation</h2>
 <div class="outline-text-2" id="text-15">
 <blockquote>
 <p>
@@ -1229,7 +1235,7 @@ In the Java programming language, an interface is a reference type, similar to a
 </blockquote>
 
 <p>
-Java Interface 在设计角度，是一种规范（ Contract ）。其规定了实现该 Interface 的「类」应该具备哪些行为（接口中的方法），即这个类能做些什么。但是！并不规定「类」该如何做。一个滥俗的例子：
+Java Interface 在设计角度，是一种规范（Contract）。其规定了实现该 Interface 的「类」应该具备哪些行为（接口中的方法），即这个类能做些什么。但是！并不规定「类」该如何做。一个滥俗的例子：
 </p>
 
 
@@ -1255,15 +1261,15 @@ Java Interface 在设计角度，是一种规范（ Contract ）。其规定了�
 </div>
 
 <p>
-这个接口规定了，实现了<code>interface Animal</code>的类，必须有<code>eat()</code>， <code>sleep()</code> ，的行为。但是！怎么吃和睡，由实现类来决定。比如，猴子吃香蕉，猫吃鱼。
+这个接口规定了，实现了 <code>interface Animal</code> 的类，必须有 <code>eat()</code> ， <code>sleep()</code> ，的行为。但是！怎么吃和睡，由实现类来决定。比如，猴子吃香蕉，猫吃鱼。
 </p>
 
 <p>
-这个例子说明，规范中隐含着对代码行为的抽象。比如将，猫吃，狗吃，大象吃，抽象为动物吃。在这个例子中，动物的概念是抽象的，而猫，狗，大象对应着动物的一种具体形态。<b>接口规范一些特定的行为，而不包含如何进行这些行为，即接口中的方法没有具体的方法实现</b>。抽象在 interface 的语法层面中表现为，interface 会被 <code>abstract</code> 修饰（隐藏的，编译后自动加的）。这意味着 interface 和 <a href="#orgc4b8bfb">lang.java.feat.abstract-class</a> 一样不能被实例化。
+这个例子说明，规范中隐含着对代码行为的抽象。比如将，猫吃，狗吃，大象吃，抽象为动物吃。在这个例子中，动物的概念是抽象的，而猫，狗，大象对应着动物的一种具体形态。 <b>接口规范一些特定的行为，而不包含如何进行这些行为，即接口中的方法没有具体的方法实现</b> 。抽象在 interface 的语法层面中表现为，interface 会被 <code>abstract</code> 修饰（隐藏的，编译后自动加的）。这意味着 interface 和 <a href="#org6aa7135">lang.java.feat.abstract-class</a> 一样不能被实例化。
 </p>
 
 <p>
-一致的是，接口中的方法是没有<code>{}</code>的。因为<code>{}</code>表示方法体。这表示什么呢？这意味着，接口中的方法也是抽象的，不包含具体定义。在<b>没有</b> <code>default</code>或 <code>static</code> 修饰的方法，都隐含着 abstract 修饰符，指示着接口实现类必须重写该方法。而对于接口中的变量，默认是<code>static final</code>的，也就是静态，即不可变的，必须在定义时指定变量值。
+一致的是，接口中的方法是没有 <code>{}</code> 的。因为 <code>{}</code> 表示方法体。这表示什么呢？这意味着，接口中的方法也是抽象的，不包含具体定义。在 <b>没有</b> <code>default</code> 或 <code>static</code> 修饰的方法，都隐含着 abstract 修饰符，指示着接口实现类必须重写该方法。而对于接口中的变量，默认是 <code>static final</code> 的，也就是静态，即不可变的，必须在定义时指定变量值。
 </p>
 
 <p>
@@ -1275,11 +1281,11 @@ Java Interface 在设计角度，是一种规范（ Contract ）。其规定了�
 </p>
 
 <p>
-通常一个 class 可以被实例化，所以拥有属于实例自身的状态（实例变量），以及有具体实现的方法。因为接口不定义具体实现，所以其应该和具体的状态无关。这样做会带来什么好处呢？<a href="#org1afa784">lang.java.oop.feat.polymorphism</a>「 <b>多态</b> 」！
+通常一个 class 可以被实例化，所以拥有属于实例自身的状态（实例变量），以及有具体实现的方法。因为接口不定义具体实现，所以其应该和具体的状态无关。这样做会带来什么好处呢？ <a href="#orgc027445">lang.java.oop.feat.polymorphism</a> 「 <b>多态</b> 」！
 </p>
 
 <p>
-Java 接口是可以被多实现的。接口在 Java 类型系统中，是一个引用类型。对于实现了接口的具体类（实现意味着定义行为的具体实现），就具备这组行为的具体实现。对于 Animal 接口，Monkey 类和 Cat 类都实现了这个 Animal ，意味着它们遵循着 Animal的规范，具有吃和睡觉的行为。当我编写一个方法，方法参数是 Animal 类型，并在方法中调用 Animal 的 <code>eat()</code> 方法，这会出现什么效果呢？
+Java 接口是可以被多实现的。接口在 Java 类型系统中，是一个引用类型。对于实现了接口的具体类（实现意味着定义行为的具体实现），就具备这组行为的具体实现。对于 Animal 接口，Monkey 类和 Cat 类都实现了这个 Animal，意味着它们遵循着 Animal 的规范，具有吃和睡觉的行为。当我编写一个方法，方法参数是 Animal 类型，并在方法中调用 Animal 的 <code>eat()</code> 方法，这会出现什么效果呢？
 </p>
 
 <div class="org-src-container">
@@ -1304,24 +1310,24 @@ Animal 「变态」了！
 </p>
 
 <p>
-<code>feed(Animal animal)</code> 方法的行为，随着传入的实现类型不同，而发生了改变。相比于为猴子，猫各写一个喂食方法，比如<code>feedCat()</code>, <code>feedMonkey()</code>，一个<code>feed(Animal)</code>实现了对于不同类型却具备相同抽象（即都能做什么）的方法整合，即方法的抽象。在符合一致抽象的情况下，面向抽象编程。
+<code>feed(Animal animal)</code> 方法的行为，随着传入的实现类型不同，而发生了改变。相比于为猴子，猫各写一个喂食方法，比如 <code>feedCat()</code>, <code>feedMonkey()</code> ，一个 <code>feed(Animal)</code> 实现了对于不同类型却具备相同抽象（即都能做什么）的方法整合，即方法的抽象。在符合一致抽象的情况下，面向抽象编程。
 </p>
 
 <p>
-在 <code>feed</code> 方法中，相当于针对引用类型 <code>Animal</code> 制定了一套通用的控制逻辑，即喂动物。具体怎么喂，则由调用 feed 方法的使用者决定。面向抽象编程的一个含义是，将代码的执行逻辑推迟，交给调用者决定应该执行什么具体逻辑。这体现了，所谓的开闭原则：「<b>对具体执行逻辑的扩展保持开放，对控制逻辑的修改保持封闭</b>」。也就是说，<code>feed(Animal animal)</code>是一套非具体过程，面向抽象的「控制逻辑」。其对兼容更多种类动物的实现保持开放。比如定义一个<code>class dog implements Animal</code>， <code>feed(Animal animal)</code> 就享受了新的扩展性，而无需更改面向抽象的逻辑。反过来，当需要修改面向抽象的逻辑时，比如动物吃完，去玩，而不是睡觉了，那所有实现了接口 Animal 的类，都可以获得这份改变。从这个例子可以知道，面向抽象编程，通过将代码中不变的逻辑抽取，降低代码的复杂度，并提高了代码的可维护性。
+在 <code>feed</code> 方法中，相当于针对引用类型 <code>Animal</code> 制定了一套通用的控制逻辑，即喂动物。具体怎么喂，则由调用 feed 方法的使用者决定。面向抽象编程的一个含义是，将代码的执行逻辑推迟，交给调用者决定应该执行什么具体逻辑。这体现了，所谓的开闭原则：「 <b>对具体执行逻辑的扩展保持开放，对控制逻辑的修改保持封闭</b> 」。也就是说， <code>feed(Animal animal)</code> 是一套非具体过程，面向抽象的「控制逻辑」。其对兼容更多种类动物的实现保持开放。比如定义一个 <code>class dog implements Animal</code> ， <code>feed(Animal animal)</code> 就享受了新的扩展性，而无需更改面向抽象的逻辑。反过来，当需要修改面向抽象的逻辑时，比如动物吃完，去玩，而不是睡觉了，那所有实现了接口 Animal 的类，都可以获得这份改变。从这个例子可以知道，面向抽象编程，通过将代码中不变的逻辑抽取，降低代码的复杂度，并提高了代码的可维护性。
 </p>
 
 <p>
-可以发现，多态的出现，是为了让不同的代码逻辑从相似的代码中抽离出来，并延迟了计算结果，即当将如何计算交给调用者，而不是耦合于代码之中。延迟计算的层次越高，则代码会越抽象，也就越稳定，越可维护。可以再过分点，将具体调用<code>feed(Animal)</code>能传什么动物，储存为一个<code>HashMap&lt;String, Animal&gt; animalTypeMap</code>，将具体的代码逻辑抽象化成了一个动物名称，根据动物名称选择 feed 应该表现出什么的结果。至于选什么，就交给程序的用户，想看饲养员喂什么动物了。当，动物园想要添加一些新动物的时候，比如狮子。饲养员喂动物的流程无需改变，只需要增加一个狮子实现类<code>class Lion implements Animal</code>，并且在 <code>animalTypeMap</code> 中添加动物类型和 <code>Lion</code> ，就完成了对动物园业务的扩展，而无需改变饲养员喂养动物的大体流程（先吃，后睡，再玩）。再比如，餐馆点单程序，面向抽象的订单编程，而不是对每一道菜编程。可以用一套代码控制点菜的流程，即所有菜品共用的代码，而不是为白切鸡，红烧肉，糖醋里脊分别写一个点菜方法控制点菜的流程。
+可以发现，多态的出现，是为了让不同的代码逻辑从相似的代码中抽离出来，并延迟了计算结果，即当将如何计算交给调用者，而不是耦合于代码之中。延迟计算的层次越高，则代码会越抽象，也就越稳定，越可维护。可以再过分点，将具体调用 <code>feed(Animal)</code> 能传什么动物，储存为一个 <code>HashMap&lt;String, Animal&gt; animalTypeMap</code> ，将具体的代码逻辑抽象化成了一个动物名称，根据动物名称选择 feed 应该表现出什么的结果。至于选什么，就交给程序的用户，想看饲养员喂什么动物了。当，动物园想要添加一些新动物的时候，比如狮子。饲养员喂动物的流程无需改变，只需要增加一个狮子实现类 <code>class Lion implements Animal</code> ，并且在 <code>animalTypeMap</code> 中添加动物类型和 <code>Lion</code> ，就完成了对动物园业务的扩展，而无需改变饲养员喂养动物的大体流程（先吃，后睡，再玩）。再比如，餐馆点单程序，面向抽象的订单编程，而不是对每一道菜编程。可以用一套代码控制点菜的流程，即所有菜品共用的代码，而不是为白切鸡，红烧肉，糖醋里脊分别写一个点菜方法控制点菜的流程。
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgc4b8bfb" class="outline-2">
-<h2 id="orgc4b8bfb"><span class="section-number-2">16.</span> lang.java.feat.abstract<sub>class</sub>&#x2013;Mechanism between Class and Interface</h2>
+<div id="outline-container-org6aa7135" class="outline-2">
+<h2 id="org6aa7135"><span class="section-number-2">16.</span> lang.java.feat.abstract_class&#x2013;Mechanism between Class and Interface</h2>
 <div class="outline-text-2" id="text-16">
 <p>
-abstract 修饰符用于修饰类和方法。abstract 表达的语义是： 1 ）修饰类，表示类不能被实例化，需要被继承； 2 ）修饰方法，表示方法需要被实现，即重写。
+abstract 修饰符用于修饰类和方法。abstract 表达的语义是：1）修饰类，表示类不能被实例化，需要被继承；2）修饰方法，表示方法需要被实现，即重写。
 </p>
 
 <blockquote>
@@ -1359,7 +1365,7 @@ When an abstract class is subclassed, the subclass usually provides implementati
 </blockquote>
 
 <p>
-如果按照 abstract 所表达的语义，相比于<a href="#org7a89ec3">lang.java.feat.interface</a>（Interface 也是默认 abstract 修饰的），为什么需要抽象类呢？
+如果按照 abstract 所表达的语义，相比于 <a href="#org1f16459">lang.java.feat.interface</a> （Interface 也是默认 abstract 修饰的），为什么需要抽象类呢？
 </p>
 
 <p>
@@ -1367,11 +1373,11 @@ When an abstract class is subclassed, the subclass usually provides implementati
 </p>
 
 <p>
-<b>接口的一大特点是「无状态」</b> 。接口内的变量是<code>public static final</code>，不可变的。其不像具体类的实例，可以拥有实例变量，储存实例状态。<b>抽象类可以具有实例状态，并其实例变量可以被子类所共享</b>。另外，抽象类可以部分抽象，包含对实例变量操作的共同方法的默认实现，即子类需要实现抽象类中的 abstract 方法，且可以选择重写抽象类中的默认实现方法，并且这些方法可以做<a href="#org74a66dc">lang.java.feat.access-level-modifiers</a>全范围的权限限制，而接口的方法和变量均为 public。
+<b>接口的一大特点是「无状态」</b> 。接口内的变量是 <code>public static final</code> ，不可变的。其不像具体类的实例，可以拥有实例变量，储存实例状态。 <b>抽象类可以具有实例状态，并其实例变量可以被子类所共享</b> 。另外，抽象类可以部分抽象，包含对实例变量操作的共同方法的默认实现，即子类需要实现抽象类中的 abstract 方法，且可以选择重写抽象类中的默认实现方法，并且这些方法可以做 <a href="#org9221c00">lang.java.feat.access-level-modifiers</a> 全范围的权限限制，而接口的方法和变量均为 public。
 </p>
 
 <p>
-abstract class 作为concrete class和 Interface 的中间地带，即可以定义规范，也可以含有带状态的默认实现。可以发现抽象类和普通类的区别在于：多了 abstract 修饰方法的能力，并且不能被实例化而已。
+abstract class 作为 concrete class 和 Interface 的中间地带，即可以定义规范，也可以含有带状态的默认实现。可以发现抽象类和普通类的区别在于：多了 abstract 修饰方法的能力，并且不能被实例化而已。
 </p>
 
 <table>
@@ -1446,7 +1452,7 @@ abstract class 作为concrete class和 Interface 的中间地带，即可以定�
 </table>
 
 <p>
-应该如何使用abstract class呢？设想一个场景，如果 100 个类需要实现一个相同的接口方法，并且实现是一致的，该怎么办呢？
+应该如何使用 abstract class 呢？设想一个场景，如果 100 个类需要实现一个相同的接口方法，并且实现是一致的，该怎么办呢？
 </p>
 <div class="org-src-container">
 <pre class="src src-java"><span style="color: #9A93E1;">public</span> <span style="color: #9A93E1;">interface</span> <span style="color: #A8CE93;">InterfaceWith100Implementions</span>{
@@ -1456,7 +1462,7 @@ abstract class 作为concrete class和 Interface 的中间地带，即可以定�
 </div>
 
 <p>
-从Java 8开始，可以使用 <code>default</code> 关键字定义接口方法的默认实现。如果这 100 个子类想遵循接口定义的规范，并且想共享一些实例变量，并在共有的方法使用这些变量，该怎么办呢？这时候抽象类就派上了用场。
+从 Java 8 开始，可以使用 <code>default</code> 关键字定义接口方法的默认实现。如果这 100 个子类想遵循接口定义的规范，并且想共享一些实例变量，并在共有的方法使用这些变量，该怎么办呢？这时候抽象类就派上了用场。
 </p>
 
 <div class="org-src-container">
@@ -1482,12 +1488,12 @@ abstract class 作为concrete class和 Interface 的中间地带，即可以定�
 </div>
 
 <p>
-在java.util包中，许多集合实现所遵循的模式是，使用 interface 定义规范，并使用abstract class提供部分的默认实现，具体的实现类，既继承了abstract class又通过声明实现规范 interface ，以显化隐式的实现。比如， HashMap 就是一个很好的例子。HashMap 继承了抽象类 AbstractMap 并实现了 Map 接口。
+在 java.util 包中，许多集合实现所遵循的模式是，使用 interface 定义规范，并使用 abstract class 提供部分的默认实现，具体的实现类，既继承了 abstract class 又通过声明实现规范 interface，以显化隐式的实现。比如，HashMap 就是一个很好的例子。HashMap 继承了抽象类 AbstractMap 并实现了 Map 接口。
 </p>
 </div>
 
-<div id="outline-container-org25c7e77" class="outline-3">
-<h3 id="org25c7e77"><span class="section-number-3">16.1.</span> abstract-template-pattern</h3>
+<div id="outline-container-org4bed151" class="outline-3">
+<h3 id="org4bed151"><span class="section-number-3">16.1.</span> abstract-template-pattern</h3>
 <div class="outline-text-3" id="text-16-1">
 <ul class="org-ul">
 <li>含抽象方法：不提供默认实现，希望子类重写</li>
@@ -1495,7 +1501,8 @@ abstract class 作为concrete class和 Interface 的中间地带，即可以定�
 </ul>
 
 <p>
-抽象类和模板模式的使用比如 HttpServlet 的 Service 根据请求类型，提供一个处理请求的模板，doGet() 只是提供一个占位，具体实现还是需要被子类来实现的。
+抽象类和模板模式的使用
+  比如 HttpServlet 的 Service 根据请求类型，提供一个处理请求的模板，doGet() 只是提供一个占位，具体实现还是需要被子类来实现的。
 </p>
 
 <blockquote>
@@ -1506,7 +1513,7 @@ abstract class 作为concrete class和 Interface 的中间地带，即可以定�
 
 <p>
 这里使用了模板方法。
-<a href="#org74a66dc">lang.java.rule.access-level-modifiers</a> <code>protected</code> 关键字在工具包中定义方法，调用方需要继承该类，才能使用该方法 <a href="#org053d832">lang.java.feat.anonymous-class.access-to-protected-method-in-other-package</a>
+<a href="#org9221c00">lang.java.rule.access-level-modifiers</a> <code>protected</code> 关键字在工具包中定义方法，调用方需要继承该类，才能使用该方法 <a href="#org3e5b81a">lang.java.feat.anonymous-class.access-to-protected-method-in-other-package</a>
 </p>
 
 <div class="org-src-container">
@@ -1535,12 +1542,12 @@ abstract class 作为concrete class和 Interface 的中间地带，即可以定�
 </div>
 
 <p>
-只需要继承 HttpServlet 实现doGet()，doPost()，请求的处理逻辑， Tomcat 就会处理请求和响应的接收和发送。
+只需要继承 HttpServlet 实现 doGet()，doPost()，请求的处理逻辑，Tomcat 就会处理请求和响应的接收和发送。
 </p>
 </div>
 </div>
-<div id="outline-container-orgf759907" class="outline-3">
-<h3 id="orgf759907"><span class="section-number-3">16.2.</span> Reference</h3>
+<div id="outline-container-org744f3ad" class="outline-3">
+<h3 id="org744f3ad"><span class="section-number-3">16.2.</span> Reference</h3>
 <div class="outline-text-3" id="text-16-2">
 <ul class="org-ul">
 <li><a href="https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html">https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html</a></li>
@@ -1549,15 +1556,16 @@ abstract class 作为concrete class和 Interface 的中间地带，即可以定�
 </div>
 </div>
 </div>
-<div id="outline-container-orgddf7935" class="outline-2">
-<h2 id="orgddf7935"><span class="section-number-2">17.</span> lang.java.feat.dynamic<sub>proxy</sub>&#x2013;Mechanism to append feature to existed code</h2>
+<div id="outline-container-orgb090c13" class="outline-2">
+<h2 id="orgb090c13"><span class="section-number-2">17.</span> lang.java.feat.dynamic_proxy&#x2013;Mechanism to append feature to existed code</h2>
 <div class="outline-text-2" id="text-17">
 <p>
 动态代理的使用场景是：
 </p>
 <ol class="org-ol">
 <li>给一组实现了共同接口的对象，添加额外的功能，其特点是，只需要编写一次代码，将被代理的对象，传入编写好的动态代理函数即可；</li>
-<li>Spring AOP，面向切面编程核心是动态创建代理对象继承目标对象，通过目标对象持有代理对象调用目标对象的方法。</li>
+<li>Spring AOP，面向切面编程
+核心是动态创建代理对象继承目标对象，通过目标对象持有代理对象调用目标对象的方法。</li>
 </ol>
 
 <p>
@@ -1565,18 +1573,18 @@ abstract class 作为concrete class和 Interface 的中间地带，即可以定�
 </p>
 
 <ol class="org-ol">
-<li><a href="#org6575cdb">Java 对象（ Object ）</a>；</li>
-<li><a href="#org0731022">Java 类的生命周期</a>；</li>
-<li><a href="#orgeb75c2b">Java 反射（ Reflection ）</a>；</li>
-<li><a href="#org356edf0">面向对象编程</a> 之接口实现多态。</li>
+<li><a href="#org8132509">Java 对象（Object）</a>；</li>
+<li><a href="#orgf4d0365">Java 类的生命周期</a>；</li>
+<li><a href="#org2bdf07f">Java 反射（Reflection）</a>；</li>
+<li><a href="#org254fad8">面向对象编程</a> 之接口实现多态。</li>
 </ol>
 
 <p>
-动态代理核心的思想：用接口 T 创建Class&lt;T&gt;对象，即实例化接口返回一个代理对象。通过将被代理对象（后续称为——目标对象）作为参数传入，在代理对象中通过反射执行目标对象的方法，并添加额外的功能。
+动态代理核心的思想：用接口 T 创建 Class&lt;T&gt; 对象，即实例化接口返回一个代理对象。通过将被代理对象（后续称为——目标对象）作为参数传入，在代理对象中通过反射执行目标对象的方法，并添加额外的功能。
 </p>
 
 <p>
-动态代理的具体实现，依靠<code>java.lang.reflect.Proxy</code>类和功能接口<code>java.lang.reflect.InvocationHandler</code>实现。
+动态代理的具体实现，依靠 <code>java.lang.reflect.Proxy</code> 类和功能接口 <code>java.lang.reflect.InvocationHandler</code> 实现。
 </p>
 
 <p>
@@ -1584,11 +1592,11 @@ abstract class 作为concrete class和 Interface 的中间地带，即可以定�
 </p>
 
 <p>
-通过 <a href="#orgeb75c2b">Java 反射（ Reflection ）</a> 创建一个对象的流程是：1) 获取描述对象 T 的 Class&lt;T&gt; 对象；2) 通过Class&lt;T&gt;对象获取 T 对象的构造器；3) 使用 <code>newInstance</code> 创建对象 T 的实例。
+通过 <a href="#org2bdf07f">Java 反射（Reflection）</a> 创建一个对象的流程是：1) 获取描述对象 T 的 Class&lt;T&gt; 对象；2) 通过 Class&lt;T&gt; 对象获取 T 对象的构造器；3) 使用 <code>newInstance</code> 创建对象 T 的实例。
 </p>
 
 <p>
-因为接口无法创建实例的，=Proxy= 类可以通过接收*一组接口*和类加载器返回一组<code>Class&lt;T&gt;</code>对象。该<code>Class&lt;T&gt;</code>对象为代理对象添加了一个<code>class T(InvocationHandler.class)</code>的构造方法。则反射实例化代理对象时需要传入一个功能接口 <code>InvocationHandler</code> 并实现 <code>invoke</code> 方法。
+因为接口无法创建实例的，=Proxy= 类可以通过接收*一组接口*和类加载器返回一组 <code>Class&lt;T&gt;</code> 对象。该 <code>Class&lt;T&gt;</code> 对象为代理对象添加了一个 <code>class T(InvocationHandler.class)</code> 的构造方法。则反射实例化代理对象时需要传入一个功能接口 <code>InvocationHandler</code> 并实现 <code>invoke</code> 方法。
 </p>
 
 <p>
@@ -1601,7 +1609,7 @@ Proxy 类主要提供两个方法获取接口 <code>T</code> 的 <code>Class&lt;
 
 <ol class="org-ol">
 <li><code>getProxyClass(ClassLoader, Interfaces)</code> 直接返回一个描述对象 <code>T</code> 的 <code>Class&lt;T&gt;</code> 对象；</li>
-<li><code>newProxyInstance(ClassLoader, Interfaces, InvocationHandler)=，其包含获取=Class&lt;T&gt;</code>对象以及通过<code>Class&lt;T&gt;</code>实例化代理对象的步骤。</li>
+<li><code>newProxyInstance(ClassLoader, Interfaces, InvocationHandler)=，其包含获取 =Class&lt;T&gt;</code> 对象以及通过 <code>Class&lt;T&gt;</code> 实例化代理对象的步骤。</li>
 </ol>
 
 
@@ -1629,15 +1637,15 @@ Proxy 类主要提供两个方法获取接口 <code>T</code> 的 <code>Class&lt;
 </div>
 </div>
 </div>
-<div id="outline-container-org8da09fb" class="outline-2">
-<h2 id="org8da09fb"><span class="section-number-2">18.</span> lang.java.feat.lambda&#x2013;Syntactic sugar of anonymous class</h2>
+<div id="outline-container-org90ba124" class="outline-2">
+<h2 id="org90ba124"><span class="section-number-2">18.</span> lang.java.feat.lambda&#x2013;Syntactic sugar of anonymous class</h2>
 <div class="outline-text-2" id="text-18">
 <p>
-lambda 是<a href="20230726T105636--functional-programming.html#ID-25d86cb3-abb6-4a1f-b4f2-e49e1bf9bae4">functional-programming.concept.higher-order-function</a>的一个特性。
+lambda 是 <a href="20230726T105636--functional-programming.html#ID-25d86cb3-abb6-4a1f-b4f2-e49e1bf9bae4">functional-programming.concept.higher-order-function</a> 的一个特性。
 </p>
 
 <p>
-这需要从传递函数开始说起。在过程语言中，如C/C++，通过函数指针可以将函数 A 作为参数在函数 B 中传递。在 Java 中，没有方法指针，所以使用接口来传递方法。在C/C++中，作为参数的函数被称为「回调函数」。去他的术语，只需要明白函数或方法在不同的语言中，传递机制是怎样的即可。
+这需要从传递函数开始说起。在过程语言中，如 C/C++ ，通过函数指针可以将函数 A 作为参数在函数 B 中传递。在 Java 中，没有方法指针，所以使用接口来传递方法。在 C/C++ 中，作为参数的函数被称为「回调函数」。去他的术语，只需要明白函数或方法在不同的语言中，传递机制是怎样的即可。
 </p>
 
 <blockquote>
@@ -1659,7 +1667,7 @@ from: <a href="https://www.javatpoint.com/java-callback-function">https://www.ja
 </blockquote>
 
 <p>
-Lambda 表达式是一个<code>匿名方法</code>，在 Java 中用于简化传递方法的语法。即在方法中传递「功能接口的实现」。功能接口中的抽象方法，定义了匿名方法的「形参类型」与「返回值」。
+Lambda 表达式是一个 <code>匿名方法</code> ，在 Java 中用于简化传递方法的语法。即在方法中传递「功能接口的实现」。功能接口中的抽象方法，定义了匿名方法的「形参类型」与「返回值」。
 </p>
 
 <p>
@@ -1711,8 +1719,8 @@ Lambda 表达式由三部分组成：「参数列表」-&gt; {「表达式」}�
 </ul>
 </div>
 
-<div id="outline-container-orgb89d467" class="outline-3">
-<h3 id="orgb89d467"><span class="section-number-3">18.1.</span> lang.java.feat.lambda.method-qoute</h3>
+<div id="outline-container-org7da9abf" class="outline-3">
+<h3 id="org7da9abf"><span class="section-number-3">18.1.</span> lang.java.feat.lambda.method-qoute</h3>
 <div class="outline-text-3" id="text-18-1">
 <p>
 使用方法引用可以更加简洁地传递功能接口的实现。
@@ -1749,20 +1757,20 @@ Lambda 表达式由三部分组成：「参数列表」-&gt; {「表达式」}�
 </p>
 
 <p>
-需要注意的是：<b>方法引用只是功能接口实现的一种方式，传入的方法依然需要满足功能接口所规定的「参数类型」和「返回类型」</b>。
+需要注意的是： <b>方法引用只是功能接口实现的一种方式，传入的方法依然需要满足功能接口所规定的「参数类型」和「返回类型」</b> 。
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgf4fd1c6" class="outline-3">
-<h3 id="orgf4fd1c6"><span class="section-number-3">18.2.</span> Functional Interface</h3>
+<div id="outline-container-org8e1854f" class="outline-3">
+<h3 id="org8e1854f"><span class="section-number-3">18.2.</span> Functional Interface</h3>
 <div class="outline-text-3" id="text-18-2">
 <p>
 功能接口可以理解为函数的容器或包装。通过功能接口包装函数，达到在方法参数传递函数的目的。功能接口可以赋予，函数的惰性求值，即不到函数被使用的一刻都不会被执行。【这个理解是比较到位的，从功能性上考虑功能接口的作用】
 </p>
 
 <p>
-功能接口是那些只包含「*单个抽象方法*」的接口。这就是说，功能接口除了包含「单个抽象方法」外，还可以包含 <code>default</code> 方法， <code>static</code> 方法和重写来自java.lang.object的方法。
+功能接口是那些只包含「*单个抽象方法*」的接口。这就是说，功能接口除了包含「单个抽象方法」外，还可以包含 <code>default</code> 方法， <code>static</code> 方法和重写来自 java.lang.object 的方法。
 </p>
 
 <p>
@@ -1802,11 +1810,11 @@ Lambda 表达式由三部分组成：「参数列表」-&gt; {「表达式」}�
 </div>
 </div>
 </div>
-<div id="outline-container-org103535f" class="outline-2">
-<h2 id="org103535f"><span class="section-number-2">19.</span> brochure.java.feat.optional&#x2013;Return-default-if-object-null</h2>
+<div id="outline-container-org62a26e2" class="outline-2">
+<h2 id="org62a26e2"><span class="section-number-2">19.</span> brochure.java.feat.optional&#x2013;Return-default-if-object-null</h2>
 <div class="outline-text-2" id="text-19">
 <p>
-在Java 8中，你可以使用`Optional`来处理可能为空的值，并根据情况返回默认值。下面是一个示例，展示了如何使用`Optional`来实现这一功能：
+在 Java 8 中，你可以使用 `Optional` 来处理可能为空的值，并根据情况返回默认值。下面是一个示例，展示了如何使用 `Optional` 来实现这一功能：
 </p>
 
 <div class="org-src-container">
@@ -1835,11 +1843,11 @@ Lambda 表达式由三部分组成：「参数列表」-&gt; {「表达式」}�
 </div>
 
 <p>
-在上述示例中，`getNullableValue()` 方法模拟了一个可能返回值的场景，我们用`Optional.ofNullable`将它包装为`Optional`对象。然后，使用`orElse`方法来获取值，如果值为空，将会返回指定的默认值。
+在上述示例中，`getNullableValue()` 方法模拟了一个可能返回值的场景，我们用 `Optional.ofNullable` 将它包装为 `Optional` 对象。然后，使用 `orElse` 方法来获取值，如果值为空，将会返回指定的默认值。
 </p>
 
 <p>
-如果`optionalValue`包含一个非空值，那么`result`将会是实际值；如果`optionalValue`为空，`result` 将会是指定的默认值。
+如果 `optionalValue` 包含一个非空值，那么 `result` 将会是实际值；如果 `optionalValue` 为空，`result` 将会是指定的默认值。
 </p>
 
 <p>
@@ -1847,8 +1855,8 @@ Lambda 表达式由三部分组成：「参数列表」-&gt; {「表达式」}�
 </p>
 </div>
 </div>
-<div id="outline-container-org9c5938e" class="outline-2">
-<h2 id="org9c5938e"><span class="section-number-2">20.</span> lang.java.feat.stream.collectors</h2>
+<div id="outline-container-orgea5ea5c" class="outline-2">
+<h2 id="orgea5ea5c"><span class="section-number-2">20.</span> lang.java.feat.stream.collectors</h2>
 <div class="outline-text-2" id="text-20">
 <p>
 This operation use in <code>.collect()</code> to reduce the stream into a new collection, like <a href="../../main/20230619T105636--qujinja_wms.html#ID-bab0e0d0-934c-4466-bb71-eae1fc03f851">lang.java.data.collection.list</a>, map, set etc.
@@ -1901,8 +1909,8 @@ Since 1.8
 </div>
 </div>
 
-<div id="outline-container-org439f0d5" class="outline-3">
-<h3 id="org439f0d5"><span class="section-number-3">20.1.</span> brochure</h3>
+<div id="outline-container-orge126796" class="outline-3">
+<h3 id="orge126796"><span class="section-number-3">20.1.</span> brochure</h3>
 <div class="outline-text-3" id="text-20-1">
 <ul class="org-ul">
 <li><a href="../../main/20230620T105636--ja_wms_notes.html#ID-702175ee-5734-496d-a235-7b9ac5de82a8">lang.java.brochure.stream.list2map</a></li>
@@ -1913,15 +1921,15 @@ Since 1.8
 </div>
 </div>
 
-<div id="outline-container-orgec3b4ea" class="outline-2">
-<h2 id="orgec3b4ea"><span class="section-number-2">21.</span> Reference</h2>
+<div id="outline-container-org8adf261" class="outline-2">
+<h2 id="org8adf261"><span class="section-number-2">21.</span> Reference</h2>
 <div class="outline-text-2" id="text-21">
 <style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
 </div>
 </div>
 </div>
-<div id="outline-container-orgb4272b3" class="outline-2">
-<h2 id="orgb4272b3"><span class="section-number-2">22.</span> Update</h2>
+<div id="outline-container-orgcf3f5b8" class="outline-2">
+<h2 id="orgcf3f5b8"><span class="section-number-2">22.</span> Update</h2>
 </div>
 <div class="taglist"><a href="https://oahnukuw.github.io/tags.html">Tags</a>: <a href="https://oahnukuw.github.io/tag-blog.java.html">blog.java</a> </div>]]></description>
   <category><![CDATA[blog.java]]></category>
